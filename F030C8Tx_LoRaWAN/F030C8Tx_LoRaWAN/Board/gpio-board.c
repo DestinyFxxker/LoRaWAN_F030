@@ -30,7 +30,7 @@ void GpioMcuInit( Gpio_t *obj, PinNames pin, PinModes mode, PinConfigs config, P
 
     obj->pinIndex = ( 0x01 << ( obj->pin & 0x0F ) );
 
-    if( ( obj->pin & 0xF0 ) == 0x00 )
+    if( ( obj->pin & 0xF0 ) == 0x00 )            //这里判断传入的引脚是哪一组的,并开启GPIOx的时钟
     {
         obj->port = GPIOA;
         __HAL_RCC_GPIOA_CLK_ENABLE( );
@@ -50,7 +50,7 @@ void GpioMcuInit( Gpio_t *obj, PinNames pin, PinModes mode, PinConfigs config, P
         obj->port = GPIOD;
         __HAL_RCC_GPIOD_CLK_ENABLE( );
     }
-//    else
+//    else                                       //F0系列没有H组GPIO，不用开H时钟
 //    {
 //        obj->port = GPIOH;
 //        __HAL_RCC_GPIOH_CLK_ENABLE( );
@@ -78,7 +78,7 @@ void GpioMcuInit( Gpio_t *obj, PinNames pin, PinModes mode, PinConfigs config, P
         {
             GPIO_InitStructure.Mode = GPIO_MODE_AF_PP;
         }
-        GPIO_InitStructure.Alternate = value;
+        GPIO_InitStructure.Alternate = value; //备用
     }
     else // mode output
     {

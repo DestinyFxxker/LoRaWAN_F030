@@ -40,7 +40,7 @@
 "f030c8tx_lorawan\spi-board.o"
 "f030c8tx_lorawan\uart-board.o"
 "f030c8tx_lorawan\stm32f0xx_it.o"
-"f030c8tx_lorawan\system_stm32f0xx_1.o"
+"f030c8tx_lorawan\system_stm32f0xx.o"
 "f030c8tx_lorawan\startup_stm32f030x8.o"
 --library_type=microlib --strict --scatter "F030C8Tx_LoRaWAN\F030C8Tx_LoRaWAN.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

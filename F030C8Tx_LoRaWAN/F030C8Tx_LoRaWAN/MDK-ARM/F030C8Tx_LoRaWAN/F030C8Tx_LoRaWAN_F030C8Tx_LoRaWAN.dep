@@ -1,20 +1,21 @@
 Dependencies for Project 'F030C8Tx_LoRaWAN', Target 'F030C8Tx_LoRaWAN': (DO NOT MODIFY !)
-F (../Src/main.c)(0x5C3322E0)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\main.o --omf_browse f030c8tx_lorawan\main.crf --depend f030c8tx_lorawan\main.d)
+F (../Src/main.c)(0x5C36C146)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\main.o --omf_browse f030c8tx_lorawan\main.crf --depend f030c8tx_lorawan\main.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\math.h)(0x599ECD2E)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -35,6 +36,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (../Inc/utilities.h)(0x58F6B4D2)
@@ -56,30 +59,31 @@ I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
 I (../Inc/LoRaMac.h)(0x59EB3B62)
 I (../Inc/LoRaMac-definitions.h)(0x5C2CA1D7)
-I (../Inc/Commissioning.h)(0x5BE55EC9)
-F (..\Src\aes.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\aes.o --omf_browse f030c8tx_lorawan\aes.crf --depend f030c8tx_lorawan\aes.d)
+I (../Inc/Commissioning.h)(0x5C356205)
+F (..\Src\aes.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\aes.o --omf_browse f030c8tx_lorawan\aes.crf --depend f030c8tx_lorawan\aes.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Inc/aes.h)(0x58F6B4D2)
-F (..\Src\cmac.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\cmac.o --omf_browse f030c8tx_lorawan\cmac.crf --depend f030c8tx_lorawan\cmac.d)
+F (..\Src\cmac.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\cmac.o --omf_browse f030c8tx_lorawan\cmac.crf --depend f030c8tx_lorawan\cmac.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Inc/aes.h)(0x58F6B4D2)
 I (../Inc/cmac.h)(0x58F6B4D2)
 I (../Inc/utilities.h)(0x58F6B4D2)
-F (..\Src\delay.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\delay.o --omf_browse f030c8tx_lorawan\delay.crf --depend f030c8tx_lorawan\delay.d)
+F (..\Src\delay.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\delay.o --omf_browse f030c8tx_lorawan\delay.crf --depend f030c8tx_lorawan\delay.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -100,6 +104,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -120,24 +126,25 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Src\fifo.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\fifo.o --omf_browse f030c8tx_lorawan\fifo.crf --depend f030c8tx_lorawan\fifo.d)
+F (..\Src\fifo.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\fifo.o --omf_browse f030c8tx_lorawan\fifo.crf --depend f030c8tx_lorawan\fifo.d)
 I (../Inc/fifo.h)(0x58F6B4D2)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-F (..\Src\gpio.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\gpio.o --omf_browse f030c8tx_lorawan\gpio.crf --depend f030c8tx_lorawan\gpio.d)
+F (..\Src\gpio.c)(0x5C35A372)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\gpio.o --omf_browse f030c8tx_lorawan\gpio.crf --depend f030c8tx_lorawan\gpio.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -158,6 +165,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -179,21 +188,22 @@ I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
 I (../Inc/gpio-board.h)(0x58F6B4D2)
-F (..\Src\LoRaMac.c)(0x5BE5658F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\loramac.o --omf_browse f030c8tx_lorawan\loramac.crf --depend f030c8tx_lorawan\loramac.d)
+F (..\Src\LoRaMac.c)(0x5BE5658F)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\loramac.o --omf_browse f030c8tx_lorawan\loramac.crf --depend f030c8tx_lorawan\loramac.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\math.h)(0x599ECD2E)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -214,6 +224,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -238,27 +250,28 @@ I (../Inc/LoRaMacCrypto.h)(0x58F6B4D2)
 I (../Inc/LoRaMac.h)(0x59EB3B62)
 I (../Inc/LoRaMac-definitions.h)(0x5C2CA1D7)
 I (../Inc/LoRaMacTest.h)(0x58F6B4D2)
-F (..\Src\LoRaMacCrypto.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\loramaccrypto.o --omf_browse f030c8tx_lorawan\loramaccrypto.crf --depend f030c8tx_lorawan\loramaccrypto.d)
+F (..\Src\LoRaMacCrypto.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\loramaccrypto.o --omf_browse f030c8tx_lorawan\loramaccrypto.crf --depend f030c8tx_lorawan\loramaccrypto.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Inc/utilities.h)(0x58F6B4D2)
 I (../Inc/aes.h)(0x58F6B4D2)
 I (../Inc/cmac.h)(0x58F6B4D2)
 I (../Inc/LoRaMacCrypto.h)(0x58F6B4D2)
-F (..\Src\sysIrqHandlers.c)(0x59EB3926)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sysirqhandlers.o --omf_browse f030c8tx_lorawan\sysirqhandlers.crf --depend f030c8tx_lorawan\sysirqhandlers.d)
+F (..\Src\sysIrqHandlers.c)(0x59EB3926)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sysirqhandlers.o --omf_browse f030c8tx_lorawan\sysirqhandlers.crf --depend f030c8tx_lorawan\sysirqhandlers.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -279,6 +292,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -299,20 +314,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Src\timer.c)(0x59AA13A2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\timer.o --omf_browse f030c8tx_lorawan\timer.crf --depend f030c8tx_lorawan\timer.d)
+F (..\Src\timer.c)(0x5C371FC8)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\timer.o --omf_browse f030c8tx_lorawan\timer.crf --depend f030c8tx_lorawan\timer.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -333,6 +349,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -353,20 +371,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Src\uart.c)(0x5A7C0C8B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\uart.o --omf_browse f030c8tx_lorawan\uart.crf --depend f030c8tx_lorawan\uart.d)
+F (..\Src\uart.c)(0x5A7C0C8B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\uart.o --omf_browse f030c8tx_lorawan\uart.crf --depend f030c8tx_lorawan\uart.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -387,6 +406,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -408,22 +429,23 @@ I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdarg.h)(0x599ECD2A)
-F (..\Src\utilities.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\utilities.o --omf_browse f030c8tx_lorawan\utilities.crf --depend f030c8tx_lorawan\utilities.d)
+F (..\Src\utilities.c)(0x58F6B4D2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\utilities.o --omf_browse f030c8tx_lorawan\utilities.crf --depend f030c8tx_lorawan\utilities.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h)(0x5C247870)
@@ -443,6 +465,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (../Inc/utilities.h)(0x58F6B4D2)
@@ -462,19 +486,20 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rtc.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rtc.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rtc.d)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rtc.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rtc.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rtc.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -495,19 +520,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rtc_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -528,19 +556,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_spi.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_spi.crf --depend f030c8tx_lorawan\stm32f0xx_hal_spi.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_spi.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_spi.crf --depend f030c8tx_lorawan\stm32f0xx_hal_spi.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -561,19 +592,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_spi_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_spi_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_spi_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_spi_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_spi_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_spi_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -594,19 +628,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_tim.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_tim.crf --depend f030c8tx_lorawan\stm32f0xx_hal_tim.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_tim.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_tim.crf --depend f030c8tx_lorawan\stm32f0xx_hal_tim.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -627,19 +664,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_tim_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_tim_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_tim_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_tim_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_tim_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_tim_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -660,19 +700,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_uart.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_uart.crf --depend f030c8tx_lorawan\stm32f0xx_hal_uart.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c)(0x5C35B7D3)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_uart.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_uart.crf --depend f030c8tx_lorawan\stm32f0xx_hal_uart.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -693,19 +736,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_uart_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_uart_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_uart_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_uart_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_uart_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_uart_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -726,19 +772,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rcc.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rcc.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rcc.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rcc.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rcc.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rcc.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -759,19 +808,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_rcc_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -792,19 +844,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal.crf --depend f030c8tx_lorawan\stm32f0xx_hal.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal.crf --depend f030c8tx_lorawan\stm32f0xx_hal.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -825,19 +880,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_i2c.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_i2c.crf --depend f030c8tx_lorawan\stm32f0xx_hal_i2c.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_i2c.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_i2c.crf --depend f030c8tx_lorawan\stm32f0xx_hal_i2c.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -858,19 +916,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_i2c_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -891,19 +952,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_gpio.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_gpio.crf --depend f030c8tx_lorawan\stm32f0xx_hal_gpio.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_gpio.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_gpio.crf --depend f030c8tx_lorawan\stm32f0xx_hal_gpio.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -924,19 +988,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_dma.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_dma.crf --depend f030c8tx_lorawan\stm32f0xx_hal_dma.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_dma.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_dma.crf --depend f030c8tx_lorawan\stm32f0xx_hal_dma.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -957,19 +1024,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_cortex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_cortex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_cortex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_cortex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_cortex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_cortex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -990,19 +1060,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_pwr.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_pwr.crf --depend f030c8tx_lorawan\stm32f0xx_hal_pwr.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_pwr.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_pwr.crf --depend f030c8tx_lorawan\stm32f0xx_hal_pwr.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1023,19 +1096,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_pwr_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1056,19 +1132,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_flash.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_flash.crf --depend f030c8tx_lorawan\stm32f0xx_hal_flash.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_flash.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_flash.crf --depend f030c8tx_lorawan\stm32f0xx_hal_flash.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1089,19 +1168,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_flash_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_flash_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_flash_ex.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_flash_ex.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_flash_ex.crf --depend f030c8tx_lorawan\stm32f0xx_hal_flash_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1122,19 +1204,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_iwdg.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_iwdg.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_iwdg.crf --depend f030c8tx_lorawan\stm32f0xx_hal_iwdg.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_iwdg.c)(0x5C247870)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_hal_iwdg.o --omf_browse f030c8tx_lorawan\stm32f0xx_hal_iwdg.crf --depend f030c8tx_lorawan\stm32f0xx_hal_iwdg.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1155,22 +1240,25 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-F (..\Drivers\Radio\sx1276.c)(0x5A7BEF7A)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sx1276.o --omf_browse f030c8tx_lorawan\sx1276.crf --depend f030c8tx_lorawan\sx1276.d)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+F (..\Drivers\Radio\sx1276.c)(0x5A7BEF7A)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sx1276.o --omf_browse f030c8tx_lorawan\sx1276.crf --depend f030c8tx_lorawan\sx1276.d)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\math.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1191,6 +1279,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (../Inc/utilities.h)(0x58F6B4D2)
@@ -1210,20 +1300,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Drivers\Radio\sx1276-board.c)(0x5A7BF13D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sx1276-board.o --omf_browse f030c8tx_lorawan\sx1276-board.crf --depend f030c8tx_lorawan\sx1276-board.d)
+F (..\Drivers\Radio\sx1276-board.c)(0x5A7BF13D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\sx1276-board.o --omf_browse f030c8tx_lorawan\sx1276-board.crf --depend f030c8tx_lorawan\sx1276-board.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1244,60 +1335,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
-I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
-I (../Inc/utilities.h)(0x58F6B4D2)
-I (../Inc/timer.h)(0x58F6B4D2)
-I (../Inc/delay.h)(0x58F6B4D2)
-I (../Inc/gpio.h)(0x58F6B4D2)
-I (../Inc/pinName-board.h)(0x58F6B4D2)
-I (../Inc/pinName-ioe.h)(0x58F6B4D2)
-I (../Inc/spi.h)(0x58F6B4D2)
-I (../Inc/spi-board.h)(0x5C2C9F17)
-I (../Inc/uart.h)(0x5A7C0CC4)
-I (../Inc/fifo.h)(0x58F6B4D2)
-I (../Inc/radio.h)(0x58F6B4D2)
-I (../Inc/sx1276.h)(0x58F6B4D2)
-I (../Inc/sx1276Regs-Fsk.h)(0x58F6B4D2)
-I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
-I (../Inc/rtc-board.h)(0x5C2C9EEC)
-I (../Inc/sx1276-board.h)(0x58F6B4D2)
-I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Board\board.c)(0x5C305721)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\board.o --omf_browse f030c8tx_lorawan\board.crf --depend f030c8tx_lorawan\board.d)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
-I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
-I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
-I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_iwdg.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h)(0x5C3082BD)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
-I (../Inc/board.h)(0x5C305ECB)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -1318,20 +1357,20 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Board\gpio-board.c)(0x5C305662)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\gpio-board.o --omf_browse f030c8tx_lorawan\gpio-board.crf --depend f030c8tx_lorawan\gpio-board.d)
-I (../Inc/board.h)(0x5C305ECB)
+F (..\Board\board.c)(0x5C3720F2)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\board.o --omf_browse f030c8tx_lorawan\board.crf --depend f030c8tx_lorawan\board.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1352,6 +1391,66 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
+I (../Inc/board.h)(0x5C305ECB)
+I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
+I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
+I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
+I (../Inc/utilities.h)(0x58F6B4D2)
+I (../Inc/timer.h)(0x58F6B4D2)
+I (../Inc/delay.h)(0x58F6B4D2)
+I (../Inc/gpio.h)(0x58F6B4D2)
+I (../Inc/pinName-board.h)(0x58F6B4D2)
+I (../Inc/pinName-ioe.h)(0x58F6B4D2)
+I (../Inc/spi.h)(0x58F6B4D2)
+I (../Inc/spi-board.h)(0x5C2C9F17)
+I (../Inc/uart.h)(0x5A7C0CC4)
+I (../Inc/fifo.h)(0x58F6B4D2)
+I (../Inc/radio.h)(0x58F6B4D2)
+I (../Inc/sx1276.h)(0x58F6B4D2)
+I (../Inc/sx1276Regs-Fsk.h)(0x58F6B4D2)
+I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
+I (../Inc/rtc-board.h)(0x5C2C9EEC)
+I (../Inc/sx1276-board.h)(0x58F6B4D2)
+I (../Inc/uart-board.h)(0x58F6B4D2)
+F (..\Board\gpio-board.c)(0x5C35AE22)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\gpio-board.o --omf_browse f030c8tx_lorawan\gpio-board.crf --depend f030c8tx_lorawan\gpio-board.d)
+I (../Inc/board.h)(0x5C305ECB)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
+I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
+I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
+I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_iwdg.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h)(0x5C3082BD)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -1373,19 +1472,20 @@ I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
 I (../Inc/gpio-board.h)(0x58F6B4D2)
-F (..\Board\rtc-board.c)(0x5C3343F6)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\rtc-board.o --omf_browse f030c8tx_lorawan\rtc-board.crf --depend f030c8tx_lorawan\rtc-board.d)
+F (..\Board\rtc-board.c)(0x5C3717F7)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\rtc-board.o --omf_browse f030c8tx_lorawan\rtc-board.crf --depend f030c8tx_lorawan\rtc-board.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1406,6 +1506,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\math.h)(0x599ECD2E)
 I (../Inc/board.h)(0x5C305ECB)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
@@ -1428,20 +1530,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Board\spi-board.c)(0x5C332994)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\spi-board.o --omf_browse f030c8tx_lorawan\spi-board.crf --depend f030c8tx_lorawan\spi-board.d)
+F (..\Board\spi-board.c)(0x5C35C140)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\spi-board.o --omf_browse f030c8tx_lorawan\spi-board.crf --depend f030c8tx_lorawan\spi-board.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1462,6 +1565,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -1482,20 +1587,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Board\uart-board.c)(0x5C3056ED)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\uart-board.o --omf_browse f030c8tx_lorawan\uart-board.crf --depend f030c8tx_lorawan\uart-board.d)
+F (..\Board\uart-board.c)(0x5C36F172)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\uart-board.o --omf_browse f030c8tx_lorawan\uart-board.crf --depend f030c8tx_lorawan\uart-board.d)
 I (../Inc/board.h)(0x5C305ECB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1516,6 +1622,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -1536,20 +1644,21 @@ I (../Inc/sx1276Regs-LoRa.h)(0x58F6B4D2)
 I (../Inc/rtc-board.h)(0x5C2C9EEC)
 I (../Inc/sx1276-board.h)(0x58F6B4D2)
 I (../Inc/uart-board.h)(0x58F6B4D2)
-F (..\Startup\stm32f0xx_it.c)(0x5C33255B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_it.o --omf_browse f030c8tx_lorawan\stm32f0xx_it.crf --depend f030c8tx_lorawan\stm32f0xx_it.d)
+F (..\Startup\stm32f0xx_it.c)(0x5C33255B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\stm32f0xx_it.o --omf_browse f030c8tx_lorawan\stm32f0xx_it.crf --depend f030c8tx_lorawan\stm32f0xx_it.d)
 I (../Inc/main.h)(0x5C304F42)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1570,20 +1679,23 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 I (../Inc/stm32f0xx_it.h)(0x5C305D4A)
-F (..\Startup\system_stm32f0xx.c)(0x5C24786E)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Startup -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_BAND_470 -DxUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\system_stm32f0xx_1.o --omf_browse f030c8tx_lorawan\system_stm32f0xx_1.crf --depend f030c8tx_lorawan\system_stm32f0xx_1.d)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C24786E)
-I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C24786E)
+F (..\Startup\system_stm32f0xx.c)(0x5C24786E)(--c99 -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ..\Startup-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F030x8 -D__GNUC__ -DUSE_HAL_DRIVER -DSTM32F030x8 -DUSE_HAL_LEGACY -DUSE_BAND_470 -DUSE_DEBUGGER -DHAL_IWDG_MODULE_ENABLED-o f030c8tx_lorawan\system_stm32f0xx.o --omf_browse f030c8tx_lorawan\system_stm32f0xx.crf --depend f030c8tx_lorawan\system_stm32f0xx.d)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x5C36AAE9)
+I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x8.h)(0x5C36ACC2)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5C247870)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5C247870)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C247870)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5C36FFE8)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x5C24786E)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x5C247870)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5C304F41)
+I (../Inc/stm32f0xx_hal_conf.h)(0x5C36BE02)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x5C247870)
-I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x5C36B6CD)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5C247870)
 I (D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h)(0x5C247870)
@@ -1604,4 +1716,6 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x5C332A20)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x5C247870)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h)(0x5C247870)
+I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h)(0x5C247870)
 F (..\Startup\startup_stm32f030x8.s)(0x5C304F46)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_F030C8Tx_LoRaWAN-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\KEILSOFTWARE\KEILC52_959\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "STM32F030x8 SETA 1"--list startup_stm32f030x8.lst --xref -o f030c8tx_lorawan\startup_stm32f030x8.o --depend f030c8tx_lorawan\startup_stm32f030x8.d)

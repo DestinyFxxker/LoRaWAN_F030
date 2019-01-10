@@ -28,9 +28,10 @@ void UartMcuInit( Uart_t *obj, uint8_t uartId, PinNames tx, PinNames rx )
     __HAL_RCC_USART1_RELEASE_RESET( );
     __HAL_RCC_USART1_CLK_ENABLE( );
 
-    GpioInit( &obj->Tx, tx, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_UP, GPIO_AF0_USART1 );
-    GpioInit( &obj->Rx, rx, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_UP, GPIO_AF0_USART1 );
-}
+    //将uart结构中的Tx Rx,与之前的pinname 'UART_TX', 'UART_RX'传入
+    GpioInit( &obj->Tx, tx, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_UP, GPIO_AF1_USART1 ); 
+    GpioInit( &obj->Rx, rx, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_UP, GPIO_AF1_USART1 );
+}   //          obj,  pinname,   pinmode,        pinconfig,      pintype,        value
 
 void UartMcuConfig( Uart_t *obj, UartMode_t mode, uint32_t baudrate, WordLength_t wordLength, StopBits_t stopBits, Parity_t parity, FlowCtrl_t flowCtrl )
 {
@@ -123,7 +124,7 @@ void UartMcuConfig( Uart_t *obj, UartMode_t mode, uint32_t baudrate, WordLength_
         assert_param( FAIL );
     }
 
-    HAL_NVIC_SetPriority( USART1_IRQn, 8, 0 );
+    HAL_NVIC_SetPriority( USART1_IRQn, 1, 0 );
     HAL_NVIC_EnableIRQ( USART1_IRQn );
 
     /* Enable the UART Data Register not empty Interrupt */

@@ -26,7 +26,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 
 void GpioInit( Gpio_t *obj, PinNames pin, PinModes mode,  PinConfigs config, PinTypes type, uint32_t value )
 {
-    if( ( uint32_t )( pin >> 4 ) <= 6 )
+    if( ( uint32_t )( pin >> 4 ) <= 6 )   //可能是检查引脚的编号是否正确
     {
         GpioMcuInit( obj, pin, mode, config, type, value );
     }

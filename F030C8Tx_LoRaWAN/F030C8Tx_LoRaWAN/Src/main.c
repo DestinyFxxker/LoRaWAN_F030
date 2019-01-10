@@ -668,12 +668,17 @@ int main( void )
 	
     BoardInitMcu( );//基础硬件初始化，注意Board.c文件中对没有使用的引脚做的低功耗处理（293行开始）
     BoardInitPeriph( );//外围初始化 -- 比如说你增加了一个温度传感器，它的初始化函数可以放在这个里面
-	
+	  //UartPutBuffer(&Uart1,"Heltec lora node demo\r\n",strlen("Heltec lora node demo\r\n"));    
 
     DeviceState = DEVICE_STATE_INIT;
-
+	  DebugPrintf("All Init OK\r\n",strlen("All Init OK\r\n"));
+//	  UartPutBuffer(&Uart1,"Heltec",7);
+//	  UartPutBuffer(&Uart1,"Heltec",6);  	
     while( 1 )
     {
+			DebugPrintf("enter while\r\n",strlen("enter while\r\n"));
+//	  	UartPutBuffer(&Uart1,"Heltec",7);
+//	  	UartPutBuffer(&Uart1,"Heltec",6);  			
         switch( DeviceState )
         {
             case DEVICE_STATE_INIT:
@@ -682,7 +687,7 @@ int main( void )
                 LoRaMacPrimitives.MacMcpsConfirm = McpsConfirm;//用户上行确认类事件，如确认上行，非确认上行回复的处理等，通信流程再次处理
                 LoRaMacPrimitives.MacMcpsIndication = McpsIndication;//下行通知类事件，如接受应答，读取数据包RSSI，SNR等，接收的数据处理，均在该函数中进行
                 LoRaMacPrimitives.MacMlmeConfirm = MlmeConfirm;//系统上行类事件，如join请求处理，linkcheck请求处理等，主要处理OTAA入网
-                LoRaMacCallbacks.GetBatteryLevel = BoardGetBatteryLevel;
+                //LoRaMacCallbacks.GetBatteryLevel = BoardGetBatteryLevel;
                 LoRaMacInitialization( &LoRaMacPrimitives, &LoRaMacCallbacks );
 
                 TimerInit( &TxNextPacketTimer, OnTxNextPacketTimerEvent );

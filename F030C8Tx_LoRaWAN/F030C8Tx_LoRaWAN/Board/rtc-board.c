@@ -23,6 +23,17 @@ Maintainer: Miguel Luis and Gregory Cristian
 #define RTC_ALARM_TICK_DURATION                     0.48828125      // 1 tick every 488us
 #define RTC_ALARM_TICK_PER_MS                       2.048           // 1/2.048 = tick duration in ms
 
+	/*!
+ * RTC timer context 
+ */
+typedef struct
+{
+    uint32_t        Time;         // Reference time
+    RTC_TimeTypeDef CalendarTime; // Reference time in calendar format
+    RTC_DateTypeDef CalendarDate; // Reference date in calendar format
+}RtcTimerContext_t;
+
+
 /*!
  * Maximum number of days that can be handled by the RTC alarm counter before overflow.
  */
@@ -47,6 +58,13 @@ static const uint32_t SecondsInDay = 86400;
  * Number of hours in a day
  */
 static const uint8_t HoursInDay = 24;
+
+/*!
+ * Keep the value of the RTC timer when the RTC alarm is set
+ * Set with the \ref RtcSetTimerContext function
+ * Value is kept as a Reference to calculate alarm
+ */
+static RtcTimerContext_t RtcTimerContext;
 
 /*!
  * Number of seconds in a leap year
@@ -190,70 +208,65 @@ static RtcCalendar_t RtcGetCalendar( void );
  * \param[IN] year Calendar current year
  */
 static void RtcCheckCalendarRollOver( uint8_t year );
-
+/*!
+ * \brief Get the current time from calendar in ticks
+ *
+ * \param [IN] date           Pointer to RTC_DateStruct
+ * \param [IN] time           Pointer to RTC_TimeStruct
+ * \retval calendarValue Time in ticks
+ */
+static uint64_t RtcGetCalendarValue( RTC_DateTypeDef* date, RTC_TimeTypeDef* time );
 void RtcInit( void )
 {
     RtcCalendar_t rtcInit;
+		RTC_TimeTypeDef sTime;
+		RTC_DateTypeDef sDate;
+		RTC_AlarmTypeDef sAlarm;
 
     if( RtcInitialized == false )
     {
 			__HAL_RCC_RTC_ENABLE( );
 			//#warning "may not need"
-			
-			RTC_TimeTypeDef sTime = {0};
-			RTC_DateTypeDef sDate = {0};
-			RTC_AlarmTypeDef sAlarm = {0};
 
-			/* USER CODE BEGIN RTC_Init 1 */
-
-			/* USER CODE END RTC_Init 1 */
 			/**Initialize RTC Only 
 			*/
 			RtcHandle.Instance = RTC;
 			RtcHandle.Init.HourFormat = RTC_HOURFORMAT_24;
-			RtcHandle.Init.AsynchPrediv = 3;
-			RtcHandle.Init.SynchPrediv = 3;
+			
+			RtcHandle.Init.AsynchPrediv = 8;
+			RtcHandle.Init.SynchPrediv = 1;
+			
 			RtcHandle.Init.OutPut = RTC_OUTPUT_DISABLE;
 			RtcHandle.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
 			RtcHandle.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
-			if (HAL_RTC_Init(&RtcHandle) != HAL_OK)
-			{
-				//Error_Handler();
-			}
+      HAL_RTC_Init( &RtcHandle );
 
-			/* USER CODE BEGIN Check_RTC_BKUP */
-				
-			/* USER CODE END Check_RTC_BKUP */
-
-			/**Initialize RTC and set the Time and Date 
-			*/
-			sTime.Hours = 0x0;
-			sTime.Minutes = 0x0;
-			sTime.Seconds = 0x0;
-			sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-			sTime.StoreOperation = RTC_STOREOPERATION_RESET;
-			if (HAL_RTC_SetTime(&RtcHandle, &sTime, RTC_FORMAT_BCD) != HAL_OK)
-			{
-				//Error_Handler();
-			}
-			sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-			sDate.Month = RTC_MONTH_JANUARY;
-			sDate.Date = 0x1;
-			sDate.Year = 0x0;
-
-			if (HAL_RTC_SetDate(&RtcHandle, &sDate, RTC_FORMAT_BCD) != HAL_OK)
-			{
-				//Error_Handler();
-			}
-			sAlarm.AlarmTime.Hours = 0x0;
-			sAlarm.AlarmTime.Minutes = 0x0;
-			sAlarm.AlarmTime.Seconds = 0x0;
-			sAlarm.AlarmTime.SubSeconds = 0x0;
-			sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-			sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-			//sAlarm.AlarmMask = RTC_ALARMMASK_NONE;
-			//#warning "may not need"
+			rtcInit.CalendarDate.WeekDay = RTC_WEEKDAY_MONDAY;
+			rtcInit.CalendarDate.Month = RTC_MONTH_JANUARY;
+			rtcInit.CalendarDate.Date = 0x1;
+			rtcInit.CalendarDate.Year = 0x0;
+			HAL_RTC_SetDate( &RtcHandle, &rtcInit.CalendarDate, RTC_FORMAT_BIN );
+			 
+			rtcInit.CalendarTime.Hours = 0x0;
+			rtcInit.CalendarTime.Minutes = 0x0;
+			rtcInit.CalendarTime.Seconds = 0x0;
+			rtcInit.CalendarTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+			rtcInit.CalendarTime.StoreOperation = RTC_STOREOPERATION_RESET;
 			HAL_RTC_SetTime( &RtcHandle, &rtcInit.CalendarTime, RTC_FORMAT_BIN );
+
+			
+//    /**Enable the Alarm A 
+//    */
+//			
+//			rtcInit.CalendarTime.Hours = 0x0;
+//			rtcInit.CalendarTime.Minutes = 0x0;
+//			rtcInit.CalendarTime.Seconds = 0x0;
+//			rtcInit.CalendarTime.SubSeconds = 0x0;
+//			rtcInit.CalendarTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+//			rtcInit.CalendarTime.StoreOperation = RTC_STOREOPERATION_RESET;
+//			//sAlarm.AlarmMask = RTC_ALARMMASK_NONE;
+//			//#warning "may not need"
+//			HAL_RTC_SetTime( &RtcHandle, &rtcInit.CalendarTime, RTC_FORMAT_BIN );
 			
 			
 			
@@ -288,11 +301,26 @@ void RtcInit( void )
 //        rtcInit.CalendarTime.StoreOperation = RTC_STOREOPERATION_RESET;
 //        HAL_RTC_SetTime( &RtcHandle, &rtcInit.CalendarTime, RTC_FORMAT_BIN );
 
+ // Enable Direct Read of the calendar registers (not through Shadow registers)
+        //HAL_RTCEx_EnableBypassShadow( &RtcHandle );
+				
         HAL_NVIC_SetPriority( RTC_IRQn, 4, 0 );
         HAL_NVIC_EnableIRQ( RTC_IRQn );
+				
+				// Init alarm.
+        //HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
+
+        //RtcSetTimerContext( );
         RtcInitialized = true;
+
     }
 }
+//	uint32_t RtcSetTimerContext( void )
+//{
+//    RtcTimerContext.Time = ( uint32_t )RtcGetCalendarValue( &RtcTimerContext.CalendarDate, &RtcTimerContext.CalendarTime );
+//    return ( uint32_t )RtcTimerContext.Time;
+//}
+
 
 void RtcSetTimeout( uint32_t timeout )
 {
@@ -447,11 +475,14 @@ static void RtcComputeWakeUpTime( void )
     }
 }
 
-static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
-{
     RtcCalendar_t now;
     RtcCalendar_t alarmTimer;
-    RTC_AlarmTypeDef alarmStructure;
+    RTC_AlarmTypeDef alarmStructure;   //将这三个变量更改为全局变量
+static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
+{
+//    RtcCalendar_t now;
+//    RtcCalendar_t alarmTimer;
+//    RTC_AlarmTypeDef alarmStructure;
 
     HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
 //    HAL_RTCEx_DeactivateWakeUpTimer( &RtcHandle );

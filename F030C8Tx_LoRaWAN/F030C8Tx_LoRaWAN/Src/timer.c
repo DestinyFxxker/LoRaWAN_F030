@@ -81,10 +81,11 @@ void TimerInit( TimerEvent_t *obj, void ( *callback )( void ) )
 
 void TimerStart( TimerEvent_t *obj )
 {
-    uint32_t elapsedTime = 0;
-    uint32_t remainingTime = 0;
+    uint32_t elapsedTime = 0;    //过去时间
+    uint32_t remainingTime = 0;  //剩余时间
 
     BoardDisableIrq( );
+	  DebugPrintf("GO to BoardDisableIrq\r\n"); //调试用
 
     if( ( obj == NULL ) || ( TimerExists( obj ) == true ) )
     {
@@ -97,34 +98,45 @@ void TimerStart( TimerEvent_t *obj )
 
     if( TimerListHead == NULL )
     {
+			  DebugPrintf("TimerListHead == NULL\r\n"); //调试用
         TimerInsertNewHeadTimer( obj, obj->Timestamp );
+			  DebugPrintf("Go to TimerInsertNewHeadTimer\r\n"); //调试用
     }
     else
     {
+			  DebugPrintf("TimerListHead != NULL\r\n"); //调试用
         if( TimerListHead->IsRunning == true )
         {
-            elapsedTime = TimerGetValue( );
+					  DebugPrintf("TimerListHead->IsRunning == true\r\n"); //调试用
+            elapsedTime = TimerGetValue( );//获取距离上一次设置闹钟的时间
+					  DebugPrintf("Get elapsedTime ok\r\n"); //调试用
             if( elapsedTime > TimerListHead->Timestamp )
             {
                 elapsedTime = TimerListHead->Timestamp; // security but should never occur
             }
-            remainingTime = TimerListHead->Timestamp - elapsedTime;
+            remainingTime = TimerListHead->Timestamp - elapsedTime;//remainingTime表示剩余的头节点中的事件剩余的定时事件
+						DebugPrintf("Get remainingTime ok\r\n"); //调试用
         }
         else
         {
+					  DebugPrintf("TimerListHead->IsRunning == false\r\n"); //调试用
             remainingTime = TimerListHead->Timestamp;
         }
 
         if( obj->Timestamp < remainingTime )
         {
+				    DebugPrintf("obj->Timestamp < remainingTime\r\n"); //调试用
             TimerInsertNewHeadTimer( obj, remainingTime );
+						DebugPrintf("Go to TimerInsertNewHeadTimer\r\n"); //调试用
         }
         else
         {
+					   DebugPrintf("obj->Timestamp > remainingTime\r\n"); //调试用
              TimerInsertTimer( obj, remainingTime );
         }
     }
     BoardEnableIrq( );
+		DebugPrintf("Go to BoardEnableIrq( )\r\n");//调试用
 }
 
 static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
@@ -134,25 +146,32 @@ static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
 
     TimerEvent_t* prev = TimerListHead;
     TimerEvent_t* cur = TimerListHead->Next;
+		DebugPrintf("TimerListHead->Next\r\n"); //调试用
 
     if( cur == NULL )
-    { // obj comes just after the head
+    { 
+			  DebugPrintf("cur == NULL\r\n"); //调试用
+			// obj comes just after the head
         obj->Timestamp -= remainingTime;
         prev->Next = obj;
         obj->Next = NULL;
     }
     else
     {
+			  DebugPrintf("cur != NULL\r\n"); //调试用
         aggregatedTimestamp = remainingTime;
         aggregatedTimestampNext = remainingTime + cur->Timestamp;
 
         while( prev != NULL )
         {
+					  DebugPrintf("prev != NULL\r\n"); //调试用
             if( aggregatedTimestampNext > obj->Timestamp )
             {
+							  DebugPrintf("aggregatedTimestampNext > obj->Timestamp\r\n"); //调试用
                 obj->Timestamp -= aggregatedTimestamp;
                 if( cur != NULL )
                 {
+									  DebugPrintf("prev != NULL\r\n"); //调试用
                     cur->Timestamp -= obj->Timestamp;
                 }
                 prev->Next = obj;
@@ -161,10 +180,13 @@ static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
             }
             else
             {
+							  DebugPrintf("aggregatedTimestampNext !> obj->Timestamp\r\n"); //调试用
                 prev = cur;
                 cur = cur->Next;
                 if( cur == NULL )
-                { // obj comes at the end of the list
+                { 
+									  DebugPrintf("cur == NULL\r\n"); //调试用
+									// obj comes at the end of the list
                     aggregatedTimestamp = aggregatedTimestampNext;
                     obj->Timestamp -= aggregatedTimestamp;
                     prev->Next = obj;
@@ -173,6 +195,7 @@ static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
                 }
                 else
                 {
+									  DebugPrintf("cur != NULL\r\n"); //调试用
                     aggregatedTimestamp = aggregatedTimestampNext;
                     aggregatedTimestampNext = aggregatedTimestampNext + cur->Timestamp;
                 }
@@ -184,9 +207,10 @@ static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
 static void TimerInsertNewHeadTimer( TimerEvent_t *obj, uint32_t remainingTime )
 {
     TimerEvent_t* cur = TimerListHead;
-
-    if( cur != NULL )
+		DebugPrintf("TimerEvent_t* cur = TimerListHead \r\n"); //调试用
+    if( cur != NULL )//表头不为空，将新的定时器插入之前，将原先表头的定时器时间减去新定时器的定时时间，确保原先的定时器任务定时正常
     {
+			  DebugPrintf("cur != NULL\r\n"); //调试用
         cur->Timestamp = remainingTime - obj->Timestamp;
         cur->IsRunning = false;
     }
@@ -194,7 +218,9 @@ static void TimerInsertNewHeadTimer( TimerEvent_t *obj, uint32_t remainingTime )
     obj->Next = cur;
     obj->IsRunning = true;
     TimerListHead = obj;
-    TimerSetTimeout( TimerListHead );
+		DebugPrintf("\r\n\r\n[obj->Next = cur]\r\n[obj->IsRunning = true]\r\n[TimerListHead = obj]\r\n\r\n"); //调试用
+    TimerSetTimeout( TimerListHead );//设置超时，等时间到的时候，会发生RTC报警
+		DebugPrintf("TimerSetTimeout\r\n"); //调试用
 }
 
 void TimerIrqHandler( void )

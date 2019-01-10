@@ -15,6 +15,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 #include "stm32f0xx_hal.h"
 #include "board.h"
 
+
 /*!
 * Unique Devices IDs register set ( STM32L1xxx )
 */
@@ -59,7 +60,7 @@ static void SystemClockReConfig( void );
 * Timer used at first boot to calibrate the SystemWakeupTime
 */
 static TimerEvent_t CalibrateSystemWakeupTimeTimer;
-
+static TimerEvent_t Test;
 /*!
 * Flag to indicate if the MCU is Initialized
 */
@@ -75,8 +76,16 @@ static bool SystemWakeupTimeCalibrated = false;
 */
 static void OnCalibrateSystemWakeupTimeTimerEvent( void )
 {
+	//RtcSetMcuWakeUpTime( );  //官方有这个
   SystemWakeupTimeCalibrated = true;
 }
+static void TEST( void )
+{
+		DebugPrintf("\r\n/****************************************/\r\n");
+		DebugPrintf("RTC TESTr\n");
+		DebugPrintf("\r\n/****************************************/\r\n");
+}
+
 
 /*!
 * Nested interrupt counter.
@@ -93,6 +102,7 @@ void BoardDisableIrq( void )
 
 void BoardEnableIrq( void )
 {
+	//DebugPrintf("IrqNestLevel--\r\n");//调试用
   IrqNestLevel--;
   if( IrqNestLevel == 0 )
   {
@@ -144,8 +154,9 @@ void BoardInitMcu( void )
 #endif
          
     RtcInit( );
-    
+		
     BoardUnusedIoInit( );
+
 //#warning "Commented for test!"
   }
   else
@@ -165,18 +176,22 @@ void BoardInitMcu( void )
     
     UartPutBuffer(&Uart1,"Heltec lora node demo\r\n",strlen("Heltec lora node demo\r\n"));    
 #endif
-  
-  SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
+	DebugPrintf("/******************************************/\r\n");//调试用
+	DebugPrintf("RTC Init finish\r\n");//调试用
+	SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
   SX1276IoInit( );
-  
+	DebugPrintf("/******************************************/\r\n");//调试用
+	DebugPrintf("1276 init ok\r\n");//调试用
+	DebugPrintf("/******************************************/\r\n\r\n");//调试用
   if( McuInitialized == false )
   {
     McuInitialized = true;
     if( GetBoardPowerSource( ) == BATTERY_POWER )
     {
+			DebugPrintf("GetBoardPowerSource ok\r\n"); //调试用
       CalibrateSystemWakeupTime( );
     }
-
+	  DebugPrintf("\r\n\r\nMcuInitialized = true\r\n"); //调试用
   }
 }
 
@@ -298,46 +313,46 @@ static void BoardUnusedIoInit( void )
   Gpio_t ioPin;
   //为了满足低功耗需求，没有使用的GPIO需要这样处理：
   //如果你要使用某些引脚，需要把这个地方相应的引脚注释掉
-  GpioInit( &ioPin, UNUSEDPINPA0, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA1, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  GpioInit( &ioPin, UNUSEDPINPA2, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA3, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA4, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA5, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA6, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA7, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  GpioInit( &ioPin, UNUSEDPINPA8, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA9, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA10, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPA12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  //  GpioInit( &ioPin, UNUSEDPINPA13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  //  GpioInit( &ioPin, UNUSEDPINPA14, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );              
-  GpioInit( &ioPin, UNUSEDPINPA15, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  
-  //  GpioInit( &ioPin, UNUSEDPINPB0, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  //  GpioInit( &ioPin, UNUSEDPINPB1, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  //  GpioInit( &ioPin, UNUSEDPINPB2, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );      
-  //  GpioInit( &ioPin, UNUSEDPINPB3, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB4, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB5, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB6, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB7, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  GpioInit( &ioPin, UNUSEDPINPB8, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB9, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB10, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
-  GpioInit( &ioPin, UNUSEDPINPB14, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-  GpioInit( &ioPin, UNUSEDPINPB15, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );    
-  
-  GpioInit( &ioPin, UNUSEDPINPC13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA0, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA1, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  GpioInit( &ioPin, UNUSEDPINPA2, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA3, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+////  GpioInit( &ioPin, UNUSEDPINPA4, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+////  GpioInit( &ioPin, UNUSEDPINPA5, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+////  GpioInit( &ioPin, UNUSEDPINPA6, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+////  GpioInit( &ioPin, UNUSEDPINPA7, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  GpioInit( &ioPin, UNUSEDPINPA8, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA9, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA10, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPA12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  //  GpioInit( &ioPin, UNUSEDPINPA13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  //  GpioInit( &ioPin, UNUSEDPINPA14, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );              
+//  GpioInit( &ioPin, UNUSEDPINPA15, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  
+//  //  GpioInit( &ioPin, UNUSEDPINPB0, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  //  GpioInit( &ioPin, UNUSEDPINPB1, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  //  GpioInit( &ioPin, UNUSEDPINPB2, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );      
+//  //  GpioInit( &ioPin, UNUSEDPINPB3, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB4, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB5, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB6, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB7, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  GpioInit( &ioPin, UNUSEDPINPB8, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB9, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB10, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
+//  GpioInit( &ioPin, UNUSEDPINPB14, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+//  GpioInit( &ioPin, UNUSEDPINPB15, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );    
+//  
+//  GpioInit( &ioPin, UNUSEDPINPC13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
   
 #if defined( USE_DEBUGGER )
-  HAL_DBGMCU_EnableDBGStopMode( );
-  HAL_DBGMCU_EnableDBGSleepMode( );
-  HAL_DBGMCU_EnableDBGStandbyMode( );
+  //HAL_DBGMCU_EnableDBGStopMode( );
+  //HAL_DBGMCU_EnableDBGSleepMode( );
+  //HAL_DBGMCU_EnableDBGStandbyMode( );
 #else
   //  HAL_DBGMCU_DisableDBGSleepMode( );
   //  HAL_DBGMCU_DisableDBGStopMode( );
@@ -351,46 +366,54 @@ static void BoardUnusedIoInit( void )
 
 void SystemClockConfig( void )
 {
+//	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+//	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+//	RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};  //原来的
+	RCC_OscInitTypeDef RCC_OscInitStruct;
+	RCC_ClkInitTypeDef RCC_ClkInitStruct;
+	RCC_PeriphCLKInitTypeDef PeriphClkInit;
 	
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+	__HAL_RCC_PWR_CLK_ENABLE( );
+  //__HAL_PWR_VOLTAGESCALING_CONFIG( PWR_REGULATOR_VOLTAGE_SCALE1 );
 
   /**Initializes the CPU, AHB and APB busses clocks 
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+
   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL8;
-  RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+  RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;   //8*8/2=32
+	
+	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  
+
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     assert_param( FAIL );
   }
   /**Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-
+  //RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1; //F030没有APB2
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     assert_param( FAIL );
   }
   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_RTC;
   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK1;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI; //设置RTC的时钟源为LSI
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     assert_param( FAIL );
   }
 	
-	
+/*  L151的时钟初始化	
 //  RCC_OscInitTypeDef RCC_OscInitStruct;
 //  RCC_ClkInitTypeDef RCC_ClkInitStruct;
 //  RCC_PeriphCLKInitTypeDef PeriphClkInit;
@@ -442,20 +465,39 @@ void SystemClockConfig( void )
 //  
 //  // SysTick_IRQn interrupt configuration
 //  HAL_NVIC_SetPriority( SysTick_IRQn, 0, 0 );
+*/
+  HAL_SYSTICK_Config( HAL_RCC_GetHCLKFreq( ) / 1000 );
+  
+  HAL_SYSTICK_CLKSourceConfig( SYSTICK_CLKSOURCE_HCLK );
+  
+  // HAL_NVIC_GetPriorityGrouping
+  //HAL_NVIC_SetPriorityGrouping( NVIC_PRIORITYGROUP_4 ); //F030没有这个
+  
+  // SysTick_IRQn interrupt configuration
+  HAL_NVIC_SetPriority( SysTick_IRQn, 8, 0 );
+	//DebugPrintf("RTC Init ok");
 }
 
 void CalibrateSystemWakeupTime( void )
 {
   if( SystemWakeupTimeCalibrated == false )
   {
+//		TimerInit( &Test, TEST );
+//		TimerSetValue( &Test, 10 );
+//    TimerStart( &Test );
+		
     TimerInit( &CalibrateSystemWakeupTimeTimer, OnCalibrateSystemWakeupTimeTimerEvent );
     TimerSetValue( &CalibrateSystemWakeupTimeTimer, 1000 );
     TimerStart( &CalibrateSystemWakeupTimeTimer );
+		DebugPrintf("TimerStart ok \r\n"); //调试用
     while( SystemWakeupTimeCalibrated == false )
     {
-//      TimerLowPowerHandler( );
+			DebugPrintf("loop \r\n"); //调试用
+			HAL_Delay(1000);
+      //TimerLowPowerHandler( ); //关闭低功耗
     }
   }
+	DebugPrintf("Out if");
 }
 
 void SystemClockReConfig( void )

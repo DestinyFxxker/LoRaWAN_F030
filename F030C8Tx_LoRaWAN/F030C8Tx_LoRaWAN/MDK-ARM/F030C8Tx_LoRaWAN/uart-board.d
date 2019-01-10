@@ -13,6 +13,7 @@ f030c8tx_lorawan\uart-board.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
+f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 f030c8tx_lorawan\uart-board.o: D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\Bin\..\include\stdio.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
@@ -33,6 +34,8 @@ f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
+f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h
+f030c8tx_lorawan\uart-board.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h
 f030c8tx_lorawan\uart-board.o: D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\Bin\..\include\stdbool.h
 f030c8tx_lorawan\uart-board.o: D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\Bin\..\include\stdlib.h
 f030c8tx_lorawan\uart-board.o: D:\KEILSOFTWARE\KEILC52_959\ARM\ARMCC\Bin\..\include\string.h

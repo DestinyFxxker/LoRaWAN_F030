@@ -2109,7 +2109,7 @@ uint32_t HAL_UART_GetError(UART_HandleTypeDef *huart)
 HAL_StatusTypeDef UART_SetConfig(UART_HandleTypeDef *huart)
 {
   uint32_t tmpreg                     = 0x00000000U;
-  UART_ClockSourceTypeDef clocksource = UART_CLOCKSOURCE_UNDEFINED;
+  UART_ClockSourceTypeDef clocksource = UART_CLOCKSOURCE_PCLK1;
   uint16_t brrtemp                    = 0x0000U;
   uint16_t usartdiv                   = 0x0000U;
   HAL_StatusTypeDef ret               = HAL_OK;
