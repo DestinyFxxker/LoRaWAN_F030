@@ -185,7 +185,7 @@ static void TimerInsertTimer( TimerEvent_t *obj, uint32_t remainingTime )
 }
 
 static void TimerInsertNewHeadTimer( TimerEvent_t *obj, uint32_t remainingTime )
-{
+{//这里传入的remainingTime为1000
     TimerEvent_t* cur = TimerListHead;
 
     if( cur != NULL )
@@ -217,6 +217,8 @@ void TimerIrqHandler( void )
     if( elapsedTime >= TimerListHead->Timestamp )  //如果距离上一次中断的时间已经超过了表头事件中设置的时间则将表头事件的时间置0,为之后的触发做准备
     {
 				//DebugPrintf("当前时间超过了设置的时间\r\n");
+				//DebugPrintf("elapsedTime is %f\r\n",elapsedTime);
+				//DebugPrintf("TimerListHead->Timestamp is %f\r\n",TimerListHead->Timestamp);
         TimerListHead->Timestamp = 0;                //将事件时间戳清零
     }
     else
@@ -229,7 +231,7 @@ void TimerIrqHandler( void )
     TimerListHead->IsRunning = false;
     while( ( TimerListHead != NULL ) && ( TimerListHead->Timestamp == 0 ) )  //当满足超时条件时执行回调函数
     {
-			  DebugPrintf("满足超时条件,开始执行回调函数\r\n");
+			  //DebugPrintf("满足超时条件,开始执行回调函数\r\n");
         TimerEvent_t* elapsedTimer = TimerListHead; //将表头位置让出
         TimerListHead = TimerListHead->Next;
         if( elapsedTimer->Callback != NULL )
@@ -420,7 +422,7 @@ static void TimerSetTimeout( TimerEvent_t *obj )
 		//	如果超过一个McuWakeUpTime周期的话，要对设定的超时时间进行调整，
 		//	使之在下一个(或则更后面)的保持唤醒周期内完成定时器任务。
 		//	调用RtcGetAdjustedTimeoutValue()函数根据McuWakeUpTime调整超时时间。
-    RtcSetTimeout( obj->Timestamp );  //把需要设定的超时时间设置到RTC中，并启动闹钟中断
+    RtcSetTimeout( obj->Timestamp );  //把需要设定的超时时间(此时还是1000)设置到RTC中，并启动闹钟中断
 }
 extern uint8_t isRxWindowOpen;
 void TimerLowPowerHandler( void )
@@ -443,7 +445,7 @@ void TimerLowPowerHandler( void )
 							}
 								GpioWrite( &ENSensor, 1 );
 								SleepIOConfig();            
-                //RtcEnterLowPowerStopMode( );
+                RtcEnterLowPowerStopMode( );
 #endif
             }
         }

@@ -328,11 +328,13 @@ static void OnTxNextPacketTimerEvent( void )
     {
         if( mibReq.Param.IsNetworkJoined == true )
         {
+					  DebugPrintf("DeviceState = DEVICE_STATE_SEND;\r\n");
             DeviceState = DEVICE_STATE_SEND;
             NextTx = true;
         }
         else
         {
+					  DebugPrintf("DeviceState = DEVICE_STATE_JOIN;\r\n");
             DeviceState = DEVICE_STATE_JOIN;
         }
     }
@@ -619,6 +621,7 @@ static void MlmeConfirm( MlmeConfirm_t *mlmeConfirm )
             else
             {
                 // Join was not successful. Try to join again
+							  DebugPrintf("MlmeConfirm认为DeviceState = DEVICE_STATE_JOIN;\r\n");
                 DeviceState = DEVICE_STATE_JOIN;
             }
             break;
@@ -646,15 +649,15 @@ static void MlmeConfirm( MlmeConfirm_t *mlmeConfirm )
 
 
 
-static TimerEvent_t iWDG_FEED;
-extern IWDG_HandleTypeDef hiwdg;
-static void OniWDG_FEEDevent()
-{
-	TimerStop(&iWDG_FEED);
-	HAL_IWDG_Refresh(&hiwdg);
-	TimerSetValue(&iWDG_FEED,20000);
-	TimerStart(&iWDG_FEED);
-}
+//static TimerEvent_t iWDG_FEED;
+//extern IWDG_HandleTypeDef hiwdg;
+//static void OniWDG_FEEDevent()
+//{
+//	TimerStop(&iWDG_FEED);
+//	HAL_IWDG_Refresh(&hiwdg);
+//	TimerSetValue(&iWDG_FEED,20000);
+//	TimerStart(&iWDG_FEED);
+//}
 
 /**
  * Main application entry point.
@@ -673,11 +676,12 @@ int main( void )
 
     while( 1 )
     {
+			  //DebugPrintf("进入switch\r\n");
         switch( DeviceState )
         {
-            case DEVICE_STATE_INIT:
+						 case DEVICE_STATE_INIT:
             {
-						
+						    DebugPrintf("DEVICE_STATE_INIT:\r\n");
                 LoRaMacPrimitives.MacMcpsConfirm = McpsConfirm;//用户上行确认类事件，如确认上行，非确认上行回复的处理等，通信流程再次处理
                 LoRaMacPrimitives.MacMcpsIndication = McpsIndication;//下行通知类事件，如接受应答，读取数据包RSSI，SNR等，接收的数据处理，均在该函数中进行
                 LoRaMacPrimitives.MacMlmeConfirm = MlmeConfirm;//系统上行类事件，如join请求处理，linkcheck请求处理等，主要处理OTAA入网
@@ -686,9 +690,9 @@ int main( void )
 
                 TimerInit( &TxNextPacketTimer, OnTxNextPacketTimerEvent );
 							
-                TimerInit( &iWDG_FEED, OniWDG_FEEDevent );
-							  TimerSetValue(&iWDG_FEED,20000);
-							  TimerStart(&iWDG_FEED);  
+//                TimerInit( &iWDG_FEED, OniWDG_FEEDevent );
+//							  TimerSetValue(&iWDG_FEED,20000);
+//							  TimerStart(&iWDG_FEED);  
 							
                 mibReq.Type = MIB_ADR;
                 mibReq.Param.AdrEnable = LORAWAN_ADR_ON;
@@ -812,7 +816,8 @@ int main( void )
             }
             case DEVICE_STATE_SLEEP:
             {		
-                //TimerLowPowerHandler( );
+							  //DebugPrintf("DEVICE_STATE_SLEEP\r\n进入TimerLowPowerHandler( );\r\n");
+                TimerLowPowerHandler( );
                 break;
             }
             default:

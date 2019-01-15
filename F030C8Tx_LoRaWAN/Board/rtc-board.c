@@ -25,7 +25,11 @@ Maintainer: Miguel Luis and Gregory Cristian
 //RTC时钟模块对输入的2.048/2.055kHz脉冲进行计数
 #define RTC_ALARM_TICK_DURATION                     0.48661825      // 1 tick every 488us
 #define RTC_ALARM_TICK_PER_MS                       2.055           // 1/2.048 = tick duration in ms
+	// sub-second number of bits
+#define N_PREDIV_S                                  10
 
+// Synchronous prediv
+#define PREDIV_S                                    ( ( 1 << N_PREDIV_S ) - 1 )
 /*!
  * Maximum number of days that can be handled by the RTC alarm counter before overflow.
  */
@@ -196,28 +200,20 @@ static void RtcCheckCalendarRollOver( uint8_t year );
 
 void RtcInit( void )
 {
-		__HAL_RCC_PWR_CLK_ENABLE();//使能电源时钟PWR
-		HAL_PWR_EnableBkUpAccess();//取消备份区域写保护
-    __HAL_RCC_LSI_ENABLE();
+		  RTC_TimeTypeDef sTime = {0};
+			RTC_DateTypeDef sDate = {0};
+			
+			//__HAL_RCC_PWR_CLK_ENABLE();//使能电源时钟PWR
+			//HAL_PWR_EnableBkUpAccess();//取消备份区域写保护
+			//__HAL_RCC_LSI_ENABLE();
 
     if( RtcInitialized == false )
     {
-  /* USER CODE BEGIN RTC_Init 0 */
 			__HAL_RCC_RTC_ENABLE();//RTC时钟使能
-			/* USER CODE END RTC_Init 0 */
 
-			RTC_TimeTypeDef sTime = {0};
-			RTC_DateTypeDef sDate = {0};
-			RTC_AlarmTypeDef sAlarm = {0};
-
-			/* USER CODE BEGIN RTC_Init 1 */
-
-			/* USER CODE END RTC_Init 1 */
-			/**Initialize RTC Only 
-			*/
 			RtcHandle.Instance = RTC;
 			RtcHandle.Init.HourFormat = RTC_HOURFORMAT_24;
-			RtcHandle.Init.AsynchPrediv = 8;  //PREDIV_A
+			RtcHandle.Init.AsynchPrediv = 9;  //PREDIV_A
 			RtcHandle.Init.SynchPrediv = 1;   //PREDIV_S
 			RtcHandle.Init.OutPut = RTC_OUTPUT_DISABLE;
 			RtcHandle.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
@@ -230,50 +226,38 @@ void RtcInit( void )
 
 			/**Initialize RTC and set the Time and Date 
 			*/
+			sDate.Year = 0x00;
+			sDate.Month = 0x01;
+			sDate.Date = 0x01;
 			sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-			sDate.Month = RTC_MONTH_JANUARY;
-			sDate.Date = 1;
-			sDate.Year = 0;
 			HAL_RTC_SetDate(&RtcHandle, &sDate, RTC_FORMAT_BIN);
 		
-  		sTime.Hours = 0;
-			sTime.Minutes = 0;
-			sTime.Seconds = 0;
-			sTime.TimeFormat = 0;
-			sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  		sTime.Hours = 0x00;
+			sTime.Minutes = 0x00;
+			sTime.Seconds = 0x00;
+			sTime.SubSeconds = 0x00;
+			//sTime.SecondFraction = 0;
+			sTime.TimeFormat = RTC_HOURFORMAT12_AM;
 			sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+			sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
 			HAL_RTC_SetTime(&RtcHandle, &sTime, RTC_FORMAT_BIN);
 			// Enable Direct Read of the calendar registers (not through Shadow registers)
       HAL_RTCEx_EnableBypassShadow( &RtcHandle );
 
-//  sAlarm.AlarmTime.Hours = 18;
-//  sAlarm.AlarmTime.Minutes = 0;
-//  sAlarm.AlarmTime.Seconds = 1;
-//  sAlarm.AlarmTime.SubSeconds = 0;
-//  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-//  sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-//  sAlarm.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY|RTC_ALARMMASK_HOURS |RTC_ALARMMASK_MINUTES ;
-//  sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
-//  sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
-//  sAlarm.AlarmDateWeekDay = 1;
-//  sAlarm.Alarm = RTC_ALARM_A;
-//  HAL_RTC_SetAlarm_IT(&RtcHandle, &sAlarm, RTC_FORMAT_BIN);
-	
+			HAL_NVIC_SetPriority( RTC_IRQn, 0, 0 );
+			HAL_NVIC_EnableIRQ( RTC_IRQn );
 
-        HAL_NVIC_SetPriority( RTC_IRQn, 1, 0 );
-        HAL_NVIC_EnableIRQ( RTC_IRQn );
-				
-				// Init alarm.
-        HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
-        
-        //RtcSetTimerContext( );
-        RtcInitialized = true;
+			// Init alarm.
+			HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
+
+			//RtcSetTimerContext( );
+			RtcInitialized = true;
 
     }
 }
 void RtcSetTimeout( uint32_t timeout )
 {
-    RtcStartWakeUpAlarm( timeout );
+    RtcStartWakeUpAlarm( timeout );//此时传入的时间还是obj->Timestamp 1000
 }
 
 TimerTime_t RtcGetAdjustedTimeoutValue( uint32_t timeout )
@@ -298,7 +282,7 @@ TimerTime_t RtcGetAdjustedTimeoutValue( uint32_t timeout )
         }
         else
         {
-				   	//DebugPrintf("timeout > 50\r\n");//调试用
+				   	//DebugPrintf("timeout > 50ms 允许进入低功耗\r\n");//调试用
             RtcTimerEventAllowsLowPower = true;
             timeout -= McuWakeUpTime;
         }
@@ -365,6 +349,7 @@ void BlockLowPowerDuringTask ( bool status )
     {
         RtcRecoverMcuStatus( );
     }
+		//DebugPrintf("执行中断并将标志置为false不允许系统进入低功耗");
     LowPowerDisableDuringTask = status;
 }
 
@@ -387,6 +372,7 @@ void RtcEnterLowPowerStopMode( void )
        // HAL_PWREx_EnableFastWakeUp( );
 
         // Enter Stop Mode
+			  DebugPrintf("进入HAL_PWR_EnterSTOPMode\r\n");
         HAL_PWR_EnterSTOPMode( PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI );
     }
 }
@@ -406,10 +392,13 @@ void RtcRecoverMcuStatus( void )
     if( ( __HAL_RCC_GET_SYSCLK_SOURCE( ) == RCC_SYSCLKSOURCE_STATUS_HSI ) ||
         ( __HAL_RCC_GET_SYSCLK_SOURCE( ) == RCC_SYSCLKSOURCE_STATUS_PLLCLK ) )
     {
-        BoardInitMcu( );
+        BoardInitMcu( ); //这里会重新初始化一次,但是系统校准已经校准过了所以只会打印一次
     }
 }
 
+/******************************************************************************************
+*****获取当前的时间与最近一个警报的时间进行计算并转化为ms放进McuWakeUpTime****************
+*/
 void RtcComputeWakeUpTime( void )
 {
     uint32_t start = 0;
@@ -424,22 +413,28 @@ void RtcComputeWakeUpTime( void )
 
         start = alarmRtc.AlarmTime.Seconds + ( SecondsInMinute * alarmRtc.AlarmTime.Minutes ) + ( SecondsInHour * alarmRtc.AlarmTime.Hours );
         stop = now.CalendarTime.Seconds + ( SecondsInMinute * now.CalendarTime.Minutes ) + ( SecondsInHour * now.CalendarTime.Hours );
-
+        //DebugPrintf("start is %f\r\n",start);
+        //DebugPrintf("stop is %f\r\n",stop);			
         McuWakeUpTime = ceil ( ( stop - start ) * RTC_ALARM_TICK_DURATION );
-
+        //DebugPrintf("McuWakeUpTime is %d\r\n",McuWakeUpTime);
         WakeUpTimeInitialized = true;
     }
 }
 
 static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
-{
+{//传入的timeoutValue是超时的时间值1000
     RtcCalendar_t now;
     RtcCalendar_t alarmTimer;
     RTC_AlarmTypeDef alarmStructure;
 
     HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
-    //HAL_RTCEx_DeactivateWakeUpTimer( &RtcHandle );
+    
+    // Clear RTC Alarm Flag
+    __HAL_RTC_ALARM_CLEAR_FLAG( &RtcHandle, RTC_FLAG_ALRAF );
 
+    // Clear the EXTI's line Flag for RTC Alarm
+    __HAL_RTC_ALARM_EXTI_CLEAR_FLAG( );
+	
     // Load the RTC calendar
     now = RtcGetCalendar( );
 
@@ -448,21 +443,25 @@ static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
 
     // timeoutValue is in ms
     alarmTimer = RtcComputeTimerTimeToAlarmTick( timeoutValue, now );
-    //RtcComputeTimerTimeToAlarmTick计算了now日历到timeoutValue的时间戳   并将结果转换为日历形式返回到alarmTimer
+    //RtcComputeTimerTimeToAlarmTick计算了now日历到timeoutValue的时间   并将结果转换为日历形式返回到alarmTimer
 
-    alarmStructure.Alarm = RTC_ALARM_A;
-    alarmStructure.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
-    alarmStructure.AlarmMask = RTC_ALARMMASK_DATEWEEKDAY|RTC_ALARMMASK_HOURS |RTC_ALARMMASK_MINUTES ;
+    alarmStructure.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;  //选择日期为闹钟参数
     alarmStructure.AlarmTime.TimeFormat = RTC_HOURFORMAT12_AM;
 		alarmStructure.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
     alarmStructure.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-    alarmStructure.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+		   
+	  alarmStructure.AlarmMask = RTC_ALARMMASK_NONE;
+    alarmStructure.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL; //屏蔽亚秒
+		
 
 	  //将得到的日历作为Alarm A的闹钟设置
+		alarmStructure.AlarmTime.SubSeconds = 0;  //未计算亚秒
     alarmStructure.AlarmTime.Seconds = alarmTimer.CalendarTime.Seconds;
     alarmStructure.AlarmTime.Minutes = alarmTimer.CalendarTime.Minutes;
     alarmStructure.AlarmTime.Hours = alarmTimer.CalendarTime.Hours;
-    alarmStructure.AlarmDateWeekDay = alarmTimer.CalendarDate.Date;
+		alarmStructure.AlarmDateWeekDay = alarmTimer.CalendarDate.Date;
+		alarmStructure.Alarm = RTC_ALARM_A;
+
     //开闹钟
     if( HAL_RTC_SetAlarm_IT( &RtcHandle, &alarmStructure, RTC_FORMAT_BIN ) != HAL_OK )
     {
@@ -548,7 +547,7 @@ static RtcCalendar_t RtcComputeTimerTimeToAlarmTick( TimerTime_t timeCounter, Rt
         hours++;
     }
 
-    while( hours >= HoursInDay )
+    while( hours >= HoursInDay )  //hours等于24小时Day++
     {
         hours -= HoursInDay;
         days++;
@@ -683,7 +682,8 @@ RtcCalendar_t RtcConvertTimerTimeToCalendarTick( TimerTime_t timeCounter )
 
     return calendar;
 }
-////将内部RTC时钟脉冲数转换成时间戳，即 当前RTC脉冲数-->时间戳
+//若没有参数传入时则为获取当前时间日历,并将日历转换为-->时间ms
+//有参数则为将传入的日历转换为时间ms
 static TimerTime_t RtcConvertCalendarTickToTimerTime( RtcCalendar_t *calendar )
 {
     TimerTime_t timeCounter = 0;
@@ -698,7 +698,7 @@ static TimerTime_t RtcConvertCalendarTickToTimerTime( RtcCalendar_t *calendar )
     }
     else
     {
-        now = *calendar;
+        now = *calendar;          //从给定的日历开始计算
     }
 
     // Years (calculation valid up to year 2099)
@@ -737,7 +737,7 @@ static TimerTime_t RtcConvertCalendarTickToTimerTime( RtcCalendar_t *calendar )
 
     timeCounterTemp = ( double )timeCounterTemp * RTC_ALARM_TICK_DURATION;  //将得到的RTC时钟脉冲数转换成时间，单位ms
 
-    timeCounter = round( timeCounterTemp );//时间戳四舍五入求值
+    timeCounter = round( timeCounterTemp );//时间ms四舍五入求值
     return ( timeCounter );
 }
 
@@ -755,13 +755,17 @@ static void RtcCheckCalendarRollOver( uint8_t year )
     }
 }
 
-//从内部RTC里获取脉冲数
+//从RTC里获取日历
 static RtcCalendar_t RtcGetCalendar( void )
 {
-	  //获取的是脉冲个数，而不是实际的时间值
+
     RtcCalendar_t calendar;
+	
     HAL_RTC_GetTime( &RtcHandle, &calendar.CalendarTime, RTC_FORMAT_BIN );
     HAL_RTC_GetDate( &RtcHandle, &calendar.CalendarDate, RTC_FORMAT_BIN );
+	  //DebugPrintf("CalendarTime Minutes is %f\r\n",calendar.CalendarTime.Minutes);
+		//DebugPrintf("CalendarTime Seconds is %f\r\n",calendar.CalendarTime.Seconds);
+
     calendar.CalendarCentury = Century;
     RtcCheckCalendarRollOver( calendar.CalendarDate.Year );
     return calendar;
@@ -770,17 +774,17 @@ static RtcCalendar_t RtcGetCalendar( void )
 /*!
  * \brief RTC IRQ Handler of the RTC Alarm
  */
-void RTC_Alarm_IRQHandler( void )
-{
-    HAL_RTC_AlarmIRQHandler( &RtcHandle );                  ///闹钟中断处理函数  清除挂起位 清除外部中断标志位
-    HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );			//失能闹钟
-	  //DebugPrintf("\r\n");
-    //RtcRecoverMcuStatus( );                                 //从休眠中唤醒MCU，进行状态恢复
-    RtcComputeWakeUpTime( );                                //计算唤醒保持时间
-    BlockLowPowerDuringTask( false );                       //阻塞进入低功耗
-    TimerIrqHandler( );                                     //RTC定时器中断处理，处理定时器链表
-}
-//void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)  // 可以重新定义 闹钟中断回调函数，添加自己的代码辅助调试
+//void RTC_Alarm_IRQHandler( void )
 //{
-//        TimerIrqHandler( );
+//		DebugPrintf("rtc-board.c\r\n");
+//    HAL_RTC_AlarmIRQHandler( &RtcHandle );                  ///闹钟中断处理函数  清除挂起位 清除外部中断标志位
+//    HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );			//失能闹钟
+//    RtcRecoverMcuStatus( );                                 //从休眠中唤醒MCU，进行状态恢复
+//    RtcComputeWakeUpTime( );                                //计算唤醒保持时间
+//    BlockLowPowerDuringTask( false );                       //阻塞进入低功耗
+//    TimerIrqHandler( );                                     //RTC定时器中断处理，处理定时器链表
 //}
+void HAL_RTC_AlarmAEventCallback( RTC_HandleTypeDef *hrtc )
+{
+    TimerIrqHandler( );
+}

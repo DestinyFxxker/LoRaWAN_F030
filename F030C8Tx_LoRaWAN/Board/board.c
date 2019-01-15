@@ -51,7 +51,7 @@ Uart_t UartUsb;
 * System Clock Configuration
 */
 static void SystemClockConfig( void );
-
+static void BoardUnusedIoInit( void );
 /*!
 * Used to measure and calibrate the system wake-up time from STOP mode
 */
@@ -82,6 +82,7 @@ static bool SystemWakeupTimeCalibrated = false;
 */
 static void OnCalibrateSystemWakeupTimeTimerEvent( void )
 {
+	DebugPrintf("SystemWakeupTimeCalibrated = true;\r\n");
   SystemWakeupTimeCalibrated = true;
 }
 
@@ -109,9 +110,9 @@ void BoardEnableIrq( void )
 
 void BoardInitPeriph( void )
 {
-    GpioInit( &ENrf, EN_RF, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
-	  GpioWrite(&ENrf, 0 );// Turn ON RF(SX1278) power	
-		HAL_Delay(800);
+//    GpioInit( &ENrf, EN_RF, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
+//	  GpioWrite(&ENrf, 0 );// Turn ON RF(SX1278) power	
+//		HAL_Delay(800);
 //	  GpioInit( &ENSensor, EN_SENSOR, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
 //	  GpioWrite(&ENSensor, 0 );// Turn ON sensor power
 //    HAL_Delay(200);
@@ -137,14 +138,14 @@ void loraMcuIrqNotify( UartNotifyId_t id )
     }
   }
 }
-static void MX_IWDG_Init(void)
-{
+//static void MX_IWDG_Init(void)
+//{
 
-  hiwdg.Instance = IWDG;
-  hiwdg.Init.Prescaler = IWDG_PRESCALER_256;
-  hiwdg.Init.Reload = 0XFFF;
-  HAL_IWDG_Init(&hiwdg);
-}
+//  hiwdg.Instance = IWDG;
+//  hiwdg.Init.Prescaler = IWDG_PRESCALER_256;
+//  hiwdg.Init.Reload = 0XFFF;
+//  HAL_IWDG_Init(&hiwdg);
+//}
 
 void BoardInitMcu( void )
 {
@@ -184,16 +185,17 @@ void BoardInitMcu( void )
     
     UartInit( &Uart1, UART_1, UART_TX, UART_RX );
     UartConfig( &Uart1, RX_TX, 115200, UART_8_BIT, UART_1_STOP_BIT, NO_PARITY, NO_FLOW_CTRL );
-    
-    UartPutBuffer(&Uart1,(uint8_t *)"\r\nHeltec lora node demo\r\n",strlen("\r\nHeltec lora node demo\r\n"));    
+    DebugPrintf("Heltec lora node demo\r\n");
+    //UartPutBuffer(&Uart1,(uint8_t *)"\r\nHeltec lora node demo\r\n",strlen("\r\nHeltec lora node demo\r\n"));    
 #endif
-    GpioInit( &ENrf, EN_RF, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
-	  GpioWrite(&ENrf, 0 );
-  SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
-  SX1276IoInit( );
-  BoardInitPeriph( );
+//		GpioInit( &ENrf, EN_RF, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
+//		GpioWrite(&ENrf, 0 );
+		SpiInit( &SX1276.Spi, RADIO_MOSI, RADIO_MISO, RADIO_SCLK, NC );
+		SX1276IoInit( );
+  //BoardInitPeriph( );
   if( McuInitialized == false )
   {
+		//DebugPrintf("Frist Open\r\n");
     McuInitialized = true;
     if( GetBoardPowerSource( ) == BATTERY_POWER )
     {
@@ -286,7 +288,7 @@ uint8_t BoardGetBatteryLevel( void )
 {
   uint8_t batteryLevel = 0;
   
-  BatteryVoltage = BoardBatteryMeasureVolage( );
+  BatteryVoltage = BoardBatteryMeasureVolage( ); //现在是0
   
   if( GetBoardPowerSource( ) == USB_POWER )
   {
@@ -313,10 +315,11 @@ uint8_t BoardGetBatteryLevel( void )
       //GpioInit( &BoardPowerDown, BOARD_POWER_DOWN, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 1 );
     }
   }
+	DebugPrintf("batteryLevel is %d\r\n",batteryLevel);
   return batteryLevel;
 }
 
-void BoardUnusedIoInit( void )
+static void BoardUnusedIoInit( void )
 {
   Gpio_t ioPin;
   //为了满足低功耗需求，没有使用的GPIO需要这样处理：
@@ -333,8 +336,8 @@ void BoardUnusedIoInit( void )
 //  GpioInit( &ioPin, UNUSEDPINPA8, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
 //  GpioInit( &ioPin, UNUSEDPINPA9, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
 //  GpioInit( &ioPin, UNUSEDPINPA10, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-//  GpioInit( &ioPin, UNUSEDPINPA11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-//  GpioInit( &ioPin, UNUSEDPINPA12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+  GpioInit( &ioPin, UNUSEDPINPA11, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+  GpioInit( &ioPin, UNUSEDPINPA12, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
 //    GpioInit( &ioPin, UNUSEDPINPA13, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );           
 //    GpioInit( &ioPin, UNUSEDPINPA14, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 ); 
 //	
@@ -370,9 +373,9 @@ void BoardUnusedIoInit( void )
   HAL_DBGMCU_EnableDBGStandbyMode( );
 
 #else
-  HAL_DBGMCU_DisableDBGSleepMode( );
-  HAL_DBGMCU_DisableDBGStopMode( );
-  HAL_DBGMCU_DisableDBGStandbyMode( );
+  //HAL_DBGMCU_DisableDBGSleepMode( );
+  //HAL_DBGMCU_DisableDBGStopMode( );
+  //HAL_DBGMCU_DisableDBGStandbyMode( );
   
   //慎用！！低功耗下关闭SWD将导致无法用STLINK仿真烧录程序！！！
   //    GpioInit( &ioPin, SWDIO, PIN_ANALOGIC, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
@@ -406,8 +409,8 @@ void SystemClockConfig( void )
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+	RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL8;
@@ -427,12 +430,12 @@ void SystemClockConfig( void )
   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit);
 	
-		HAL_SYSTICK_Config( HAL_RCC_GetHCLKFreq( ) / 1000 );
+	HAL_SYSTICK_Config( HAL_RCC_GetHCLKFreq( ) / 1000 );
 
-//	HAL_SYSTICK_CLKSourceConfig( SYSTICK_CLKSOURCE_HCLK );
+	HAL_SYSTICK_CLKSourceConfig( SYSTICK_CLKSOURCE_HCLK );
 
-//	// SysTick_IRQn interrupt configuration
-//	HAL_NVIC_SetPriority( SysTick_IRQn, 0, 0 );
+	// SysTick_IRQn interrupt configuration
+	HAL_NVIC_SetPriority( SysTick_IRQn, 0, 0 );
 }
 		
 
@@ -443,10 +446,13 @@ void CalibrateSystemWakeupTime( void )
     TimerInit( &CalibrateSystemWakeupTimeTimer, OnCalibrateSystemWakeupTimeTimerEvent );
     TimerSetValue( &CalibrateSystemWakeupTimeTimer, 1000 );
     TimerStart( &CalibrateSystemWakeupTimeTimer );
+		//DebugPrintf("Alarm start\r\n");
+		#warning "这里是开始第一个闹钟"
     while( SystemWakeupTimeCalibrated == false )
     {
-			//DebugPrintf("loop\r\n");
-      TimerLowPowerHandler( );
+			//DebugPrintf("SystemWakeupTimeCalibrated = %d\r\n",SystemWakeupTimeCalibrated);
+			DelayMs(1000);
+      //TimerLowPowerHandler( );
     }
   }
 }

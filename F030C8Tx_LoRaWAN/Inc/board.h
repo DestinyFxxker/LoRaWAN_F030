@@ -21,6 +21,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 #include <string.h>
 #include <stdint.h>
 #include "stm32f0xx.h"
+//#include "stm32l1xx_hal.h"
 #include "utilities.h"
 #include "timer.h"
 #include "delay.h"
@@ -29,13 +30,9 @@ Maintainer: Miguel Luis and Gregory Cristian
 #include "uart.h"
 #include "radio.h"
 #include "sx1276.h"
-
 #include "rtc-board.h"
 #include "sx1276-board.h"
 #include "uart-board.h"
-
-
-
 
 #if defined( USE_USB_CDC )
 #include "uart-usb-board.h"
@@ -65,18 +62,47 @@ Maintainer: Miguel Luis and Gregory Cristian
  * Board MCU pins definitions
  */
 
-#define RADIO_DIO_0                                 PA_12
-#define RADIO_DIO_1                                 PA_11
-//#define RADIO_DIO_2                                 PB_0
+#define RADIO_DIO_0                                 PB_0
+#define RADIO_DIO_1                                 PB_10
+//#define RADIO_DIO_2                                 PB_11
 //#define RADIO_DIO_3                                 PB_3
 //#define RADIO_DIO_4                                 PB_4
 //#define RADIO_DIO_5                                 PB_5
 
-#define EN_RF                                       PB_9
-#define EN_SENSOR                                   PA_8
-//#define LED 																				PB_58
+//#define RF_RXTX1                                    PB_7
+//#define RF_RXTX2                                    PB_8
 
-#define RADIO_RESET                                 PB_3
+#define RADIO_RESET                                 PB_1
+
+#define RADIO_NSS                                   PA_4
+#define RADIO_SCLK                                  PA_5
+#define RADIO_MISO                                  PA_6
+#define RADIO_MOSI                                  PA_7
+
+#define OSC_LSE_IN                                  PC_14
+#define OSC_LSE_OUT                                 PC_15
+
+#define OSC_HSE_IN                                  PH_0
+#define OSC_HSE_OUT                                 PH_1
+
+#define UART_TX                                     PA_9
+#define UART_RX                                     PA_10
+
+#define SWDIO                                       PA_13
+#define SWCLK                                       PA_14
+
+/*
+#define RADIO_DIO_0                                 PB_0
+#define RADIO_DIO_1                                 PB_1
+#define RADIO_DIO_2                                 PB_2
+#define RADIO_DIO_3                                 PB_3
+//#define RADIO_DIO_4                                 PB_4
+//#define RADIO_DIO_5                                 PB_5
+
+#define RF_RXTX1                                    PB_7 
+#define RF_RXTX2                                    PB_8 
+
+#define RADIO_RESET                                 PB_9
 
 #define RADIO_NSS                                   PB_12
 #define RADIO_SCLK                                  PB_13
@@ -94,17 +120,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 
 #define SWDIO                                       PA_13
 #define SWCLK                                       PA_14
-
-#define SPI2_NSS                               	    PA_4
-#define SPI2_SCLK                               	  PA_5
-#define SPI2_MISO                               	  PA_6
-#define SPI2_MOSI                                   PA_7
-
-#define SPI2_RST                                    PA_3
-
-#define I2C1_SDA                               	    PB_11
-#define I2C1_SCL                                    PB_10
-
+*/
 /*!
  * Board MCU unusedpins definitions
  */
@@ -117,35 +133,35 @@ Maintainer: Miguel Luis and Gregory Cristian
 #define UNUSEDPINPA6                                    PA_6
 #define UNUSEDPINPA7                                    PA_7
 #define UNUSEDPINPA8                                    PA_8
-#define UNUSEDPINPA9                                    PA_9
-#define UNUSEDPINPA10                                   PA_10
+//#define UNUSEDPINPA9                                    PA_9
+//#define UNUSEDPINPA10                                   PA_10
 #define UNUSEDPINPA11                                   PA_11
 #define UNUSEDPINPA12                                   PA_12
-#define UNUSEDPINPA13                                   PA_13
-#define UNUSEDPINPA14                                   PA_14
+//#define UNUSEDPINPA13                                   PA_13
+//#define UNUSEDPINPA14                                   PA_14
 #define UNUSEDPINPA15                                   PA_15
 
-#define UNUSEDPINPB0                                    PB_0
-#define UNUSEDPINPB1                                    PB_1
-#define UNUSEDPINPB2                                    PB_2
-#define UNUSEDPINPB3                                    PB_3
+//#define UNUSEDPINPB0                                    PB_0
+//#define UNUSEDPINPB1                                    PB_1
+//#define UNUSEDPINPB2                                    PB_2
+//#define UNUSEDPINPB3                                    PB_3
 #define UNUSEDPINPB4                                    PB_4
 #define UNUSEDPINPB5                                    PB_5
 #define UNUSEDPINPB6                                    PB_6
-#define UNUSEDPINPB7                                    PB_7
-#define UNUSEDPINPB8                                    PB_8
-#define UNUSEDPINPB9                                    PB_9
+//#define UNUSEDPINPB7                                    PB_7
+//#define UNUSEDPINPB8                                    PB_8
+//#define UNUSEDPINPB9                                    PB_9
 #define UNUSEDPINPB10                                   PB_10
 #define UNUSEDPINPB11                                   PB_11
-#define UNUSEDPINPB12                                   PB_12
-#define UNUSEDPINPB13                                   PB_13
-#define UNUSEDPINPB14                                   PB_14
-#define UNUSEDPINPB15                                   PB_15
+//#define UNUSEDPINPB12                                   PB_12
+//#define UNUSEDPINPB13                                   PB_13
+//#define UNUSEDPINPB14                                   PB_14
+//#define UNUSEDPINPB15                                   PB_15
 
 #define UNUSEDPINPC13                                   PC_13
 
-//extern Gpio_t rftrx1;
-//extern Gpio_t rftrx2;
+extern Gpio_t rftrx1;
+extern Gpio_t rftrx2;
 
 /*!
  * MCU objects
@@ -156,9 +172,6 @@ extern Uart_t UartUsb;
 #endif
 
 
-extern Gpio_t ENrf;
-extern Gpio_t ENSensor;
-void BoardUnusedIoInit( void );
 
 /*!
  * Possible power sources
@@ -230,10 +243,6 @@ uint32_t BoardGetRandomSeed( void );
  * \param [IN] id Pointer to an array that will contain the Unique ID
  */
 void BoardGetUniqueId( uint8_t *id );
-
-void SleepIOConfig( void );
-void WakeupIOConfig( void );
-
 
 /*!
  * \brief Get the board power source

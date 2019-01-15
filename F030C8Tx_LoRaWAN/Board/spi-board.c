@@ -47,11 +47,11 @@ void SpiInit( Spi_t *obj, PinNames mosi, PinNames miso, PinNames sclk, PinNames 
         if( nss == NC )
         {
             obj->Spi.Init.NSS = SPI_NSS_SOFT;
-            SpiFormat( obj, SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 0 );
+            SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 0 );
         }
         else
         {
-            SpiFormat( obj, SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 1 );
+            SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 1 );
         }
     }
     else if( mosi == PB_15 )
@@ -71,11 +71,11 @@ void SpiInit( Spi_t *obj, PinNames mosi, PinNames miso, PinNames sclk, PinNames 
         if( nss == NC )
         {
             obj->Spi.Init.NSS = SPI_NSS_SOFT;
-            SpiFormat( obj, SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 0 );
+            SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 0 );
         }
         else
         {
-            SpiFormat( obj, SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 1 );
+            SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 1 );
         }
     }
     SpiFrequency( obj, 10000000 );
@@ -99,7 +99,7 @@ void SpiDeInit( Spi_t *obj )
 void SpiFormat( Spi_t *obj, int8_t bits, int8_t cpol, int8_t cpha, int8_t slave )
 {
     obj->Spi.Init.Direction = SPI_DIRECTION_2LINES;
-    if( bits == SPI_DATASIZE_8BIT )
+    if( bits == (int8_t)SPI_DATASIZE_8BIT )
     {
         obj->Spi.Init.DataSize = SPI_DATASIZE_8BIT;
     }
