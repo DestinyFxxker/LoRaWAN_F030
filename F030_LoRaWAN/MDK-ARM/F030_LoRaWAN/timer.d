@@ -24,7 +24,6 @@ f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h
-f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_iwdg.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
 f030_lorawan\timer.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h

@@ -63,7 +63,7 @@ Maintainer: Miguel Luis and Gregory Cristian
  */
 
 #define RADIO_DIO_0                                 PB_0
-//#define RADIO_DIO_1                                 PB_10
+#define RADIO_DIO_1                                 PB_10
 //#define RADIO_DIO_2                                 PB_11
 //#define RADIO_DIO_3                                 PB_3
 //#define RADIO_DIO_4                                 PB_4

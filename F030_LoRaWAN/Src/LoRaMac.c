@@ -1080,8 +1080,10 @@ static void OnRadioTxDone( void )
 
     // Setup timers
     //下行数据的开始，是在发送完成后，延时一段时间，分别开启RX1和RX2接收窗口
+		//DebugPrintf("IsRxWindowsEnabled == true\r\n");
     if( IsRxWindowsEnabled == true )
     {
+			  //DebugPrintf("IsRxWindowsEnabled == true\r\n");
         TimerSetValue( &RxWindowTimer1, RxWindow1Delay );
         TimerStart( &RxWindowTimer1 );
         if( LoRaMacDeviceClass != CLASS_C )
@@ -1137,6 +1139,8 @@ static void PrepareRxDoneAbort( void )
     // Trig OnMacCheckTimerEvent call as soon as possible
     TimerSetValue( &MacStateCheckTimer, 1 );
     TimerStart( &MacStateCheckTimer );
+//		DebugPrintf("\r\n TimerStart( &MacStateCheckTimer )\r\n");
+		//OnMacStateCheckTimerEvent();
 }
 //OnRadioRxDone携带着MAC�?
 static void OnRadioRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
@@ -1550,6 +1554,8 @@ static void OnRadioRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t
     // Trig OnMacCheckTimerEvent call as soon as possible
     TimerSetValue( &MacStateCheckTimer, 1 );
     TimerStart( &MacStateCheckTimer );
+//		DebugPrintf("\r\nTimerStart( &MacStateCheckTimer );\r\n");
+//		OnMacStateCheckTimerEvent();
 }
 
 static void OnRadioTxTimeout( void )
@@ -1629,6 +1635,7 @@ static void OnRadioRxTimeout( void )
 
 static void OnMacStateCheckTimerEvent( void )
 {
+	  DebugPrintf("OnMacStateCheckTimerEvent is running \r\n");
     TimerStop( &MacStateCheckTimer );
     bool txTimeout = false;
 
@@ -1880,6 +1887,7 @@ static void OnRxWindow1TimerEvent( void )
     RxWindowSetup( Channels[Channel].Frequency, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[0].RxWindowTimeout, false );
     //利用 ( Channel % 48 ) 将上行信道分�?~7，分别与下行信道�?~7对应
 #elif defined( USE_BAND_470 ) || defined( USE_BAND_470PREQUEL )
+		DebugPrintf("\r\n\r\nRX1 Window open\r\n\r\n");
     RxWindowSetup( LORAMAC_FIRST_RX1_CHANNEL + ( Channel % 48 ) * LORAMAC_STEPWIDTH_RX1_CHANNEL, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[0].RxWindowTimeout, false );
 #elif ( defined( USE_BAND_915 ) || defined( USE_BAND_915_HYBRID ) )
     RxWindowSetup( LORAMAC_FIRST_RX1_CHANNEL + ( Channel % 8 ) * LORAMAC_STEPWIDTH_RX1_CHANNEL, RxWindowsParams[0].Datarate, RxWindowsParams[0].Bandwidth, RxWindowsParams[0].RxWindowTimeout, false );
@@ -1899,6 +1907,7 @@ static void OnRxWindow2TimerEvent( void )
     {
         rxContinuousMode = true;
     }
+		DebugPrintf("\r\n\r\nRX2 Window open\r\n\r\n");
     if( RxWindowSetup( LoRaMacParams.Rx2Channel.Frequency, RxWindowsParams[1].Datarate, RxWindowsParams[1].Bandwidth, RxWindowsParams[1].RxWindowTimeout, rxContinuousMode ) == true )
     {
         RxSlot = 1;

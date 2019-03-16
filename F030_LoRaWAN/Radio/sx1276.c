@@ -1454,7 +1454,7 @@ void SX1276OnTimeoutIrq( void )
 void SX1276OnDio0Irq( void )
 {
     volatile uint8_t irqFlags = 0;
-	UartPutBuffer(&Uart1,"0",strlen("0"));
+    DebugPrintf("\r\n 0 \r\n");
     switch( SX1276.Settings.State )
     {
         case RF_RX_RUNNING:
@@ -1564,6 +1564,7 @@ void SX1276OnDio0Irq( void )
 
                         if( ( RadioEvents != NULL ) && ( RadioEvents->RxError != NULL ) )
                         {
+													  DebugPrintf("\r\nRadioEvents->RxError( )\r\n");
                             RadioEvents->RxError( );
                         }
                         break;
@@ -1619,6 +1620,7 @@ void SX1276OnDio0Irq( void )
 
                     if( ( RadioEvents != NULL ) && ( RadioEvents->RxDone != NULL ) )
                     {
+												DebugPrintf("\r\nRadioEvents->RxDone\r\n");
                         RadioEvents->RxDone( RxTxBuffer, SX1276.Settings.LoRaPacketHandler.Size, SX1276.Settings.LoRaPacketHandler.RssiValue, SX1276.Settings.LoRaPacketHandler.SnrValue );
                     }
                 }
@@ -1653,7 +1655,7 @@ void SX1276OnDio0Irq( void )
 
 void SX1276OnDio1Irq( void )
 {
-	UartPutBuffer(&Uart1,"1",strlen("1"));
+    DebugPrintf("\r\n 1 \r\n");
     switch( SX1276.Settings.State )
     {
         case RF_RX_RUNNING:

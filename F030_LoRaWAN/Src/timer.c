@@ -241,7 +241,7 @@ void TimerIrqHandler( void )
         }
 				else
 				{
-					//DebugPrintf("回调函数不存在\r\n");
+					//DebugPrintf("Not Callback \r\n");
 				}
     }
 
@@ -293,7 +293,8 @@ void TimerStop( TimerEvent_t *obj )
             if( TimerListHead->Next != NULL )               //定时器链表有两个及以上对象
             {
                 TimerListHead->IsRunning = false;
-                TimerListHead = TimerListHead->Next;        //将下一事件放进头节点中
+                TimerListHead = TimerListHead->Next;							//将下一事件放进头节点中
+							  //DebugPrintf("\r\n TimerListHead = TimerListHead->Next;	\r\n");
                 TimerListHead->Timestamp += remainingTime;  //头节点的定时时间戳需要加上剩余的时间
 							                                              //因为此链表是RTC链表非定时器链表,事件与事件之间并非平行而是以固定的时间段相连
 							                                              //当停止某中间事件时为了不影响其后事件,则需要将停止事件的时间保留

@@ -25,7 +25,7 @@ extern Gpio_t	ENrf;
 /*!
  * Defines the application data transmission duty cycle. 60s, value in [ms].
  */
-#define APP_TX_DUTYCYCLE                            10000
+#define APP_TX_DUTYCYCLE                            60000
 
 /*!
  * Defines a random delay for application data transmission duty cycle. 1s,
@@ -617,11 +617,12 @@ static void MlmeConfirm( MlmeConfirm_t *mlmeConfirm )
                 UartPutBuffer(&Uart1,(uint8_t *)"+JOIN:DONE\r\n\r\n",strlen("+JOIN:DONE\r\n\r\n"));
                 // Status is OK, node has joined the network
                 DeviceState = DEVICE_STATE_SEND;
+							  DebugPrintf("DeviceState = DEVICE_STATE_SEND;\r\n");
             }
             else
             {
                 // Join was not successful. Try to join again
-							  DebugPrintf("MlmeConfirm认为DeviceState = DEVICE_STATE_JOIN;\r\n");
+							  //DebugPrintf("MlmeConfirm认为DeviceState = DEVICE_STATE_JOIN;\r\n");
                 DeviceState = DEVICE_STATE_JOIN;
             }
             break;
@@ -673,9 +674,9 @@ int main( void )
 	
     hspi1=SX1276.Spi.Spi;
     DeviceState = DEVICE_STATE_INIT;
-    SX1276Write(0x0A,8);
-	  SX1276Read(0x0A);
-	  DebugPrintf("SX1276Read(REG_OPMODE) is %d\r\n",SX1276Read(0x0A));
+//    SX1276Write(0x0A,8);
+//	  SX1276Read(0x0A);
+//	  DebugPrintf("SX1276Read(REG_OPMODE) is %d\r\n",SX1276Read(0x0A));
     while( 1 )
     {
         switch( DeviceState )

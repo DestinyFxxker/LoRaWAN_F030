@@ -44,7 +44,7 @@ void SpiInit( Spi_t *obj, PinNames mosi, PinNames miso, PinNames sclk, PinNames 
 
         if( nss == NC )
         {
-						DebugPrintf("ZHUJI\r\n");
+						//DebugPrintf("Master\r\n");
             obj->Spi.Init.NSS = SPI_NSS_SOFT;
             SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 0 );
         }
@@ -73,14 +73,14 @@ void SpiInit( Spi_t *obj, PinNames mosi, PinNames miso, PinNames sclk, PinNames 
         }
         else
         {
-					  DebugPrintf("congji\r\n");
+					  //DebugPrintf("Servant\r\n");
 					  SpiFormat( obj, (int8_t)SPI_DATASIZE_8BIT, SPI_POLARITY_LOW, SPI_PHASE_1EDGE, 1);
         }
     }
     SpiFrequency( obj, 1000000 );
 	  if (HAL_SPI_Init( &obj->Spi ) != HAL_OK)
 		{
-			DebugPrintf("spi init shibai\r\n");
+			DebugPrintf("spi init failed\r\n");
 		}
 		__HAL_SPI_ENABLE( &obj->Spi );
 		//DebugPrintf("abc");

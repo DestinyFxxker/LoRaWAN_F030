@@ -335,7 +335,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32F030x8,USE_BAND_470,USE_DEBUGGER,HAL_IWDG_MODULE_ENABLED</Define>
+              <Define>USE_HAL_DRIVER,STM32F030x8,USE_BAND_470,USE_DEBUGGER,</Define>
               <Undefine></Undefine>
               <IncludePath>../Inc;../Drivers/STM32F0xx_HAL_Driver/Inc;../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F0xx/Include;../Drivers/CMSIS/Include</IncludePath>
             </VariousControls>

@@ -31,7 +31,7 @@ Gpio_t ENSensor;
 //Gpio_t rftrx2;
 
 Gpio_t UsbDetect;
-IWDG_HandleTypeDef hiwdg;
+//IWDG_HandleTypeDef hiwdg;
 //extern ADXL357_t ADXL357;
 
 /*
@@ -66,7 +66,9 @@ static void SystemClockReConfig( void );
 * Timer used at first boot to calibrate the SystemWakeupTime
 */
 static TimerEvent_t CalibrateSystemWakeupTimeTimer;
-
+static TimerEvent_t TEST5S;
+static TimerEvent_t TEST10S;
+static TimerEvent_t TEST15S;
 /*!
 * Flag to indicate if the MCU is Initialized
 */
@@ -84,6 +86,21 @@ static void OnCalibrateSystemWakeupTimeTimerEvent( void )
 {
 	//DebugPrintf("SystemWakeupTimeCalibrated = true;\r\n");
   SystemWakeupTimeCalibrated = true;
+}
+static void TEST5( void )
+{
+	DebugPrintf("\r\n\r\n  5S \r\n\r\n");
+  //SystemWakeupTimeCalibrated = true;
+}
+static void TEST10( void )
+{
+	DebugPrintf("\r\n\r\n  10S \r\n\r\n");
+  //SystemWakeupTimeCalibrated = true;
+}
+static void TEST15( void )
+{
+	DebugPrintf("\r\n\r\n  15S \r\n\r\n");
+  //SystemWakeupTimeCalibrated = true;
 }
 /*!
 * Nested interrupt counter.
@@ -185,7 +202,7 @@ void BoardInitMcu( void )
     
     UartInit( &Uart1, UART_1, UART_TX, UART_RX );
     UartConfig( &Uart1, RX_TX, 115200, UART_8_BIT, UART_1_STOP_BIT, NO_PARITY, NO_FLOW_CTRL );
-    DebugPrintf("Heltec lora node demo\r\n");
+    //DebugPrintf("Heltec lora node demo\r\n");
     //UartPutBuffer(&Uart1,(uint8_t *)"\r\nHeltec lora node demo\r\n",strlen("\r\nHeltec lora node demo\r\n"));    
 #endif
 //		GpioInit( &ENrf, EN_RF, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );	
@@ -406,9 +423,9 @@ void SystemClockConfig( void )
   HAL_PWR_EnableBkUpAccess(); //关闭写保护，允许访问备份区域
   /**Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSE;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-	RCC_OscInitStruct.LSIState = RCC_LSI_ON;
+	RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
@@ -427,7 +444,7 @@ void SystemClockConfig( void )
   
 	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_RTC;
   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK1;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSE;
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit);
 	
 	HAL_SYSTICK_Config( HAL_RCC_GetHCLKFreq( ) / 1000 );
@@ -447,6 +464,19 @@ void CalibrateSystemWakeupTime( void )
     TimerInit( &CalibrateSystemWakeupTimeTimer, OnCalibrateSystemWakeupTimeTimerEvent );
     TimerSetValue( &CalibrateSystemWakeupTimeTimer, 1000 );
     TimerStart( &CalibrateSystemWakeupTimeTimer );
+//		DelayMs(2000);
+//		TimerInit( &TEST5S, TEST5 );
+//		TimerSetValue( &TEST5S, 5000 );
+//		TimerStart( &TEST5S );
+//		
+//		TimerInit( &TEST10S, TEST10 );
+//		TimerSetValue( &TEST10S, 10000 );
+//		TimerStart( &TEST10S );
+//		
+//		TimerInit( &TEST15S, TEST15 );
+//		TimerSetValue( &TEST15S, 15000 );
+//		TimerStart( &TEST15S );		
+		
 		//DebugPrintf("Alarm start\r\n");
     while( SystemWakeupTimeCalibrated == false )
     {

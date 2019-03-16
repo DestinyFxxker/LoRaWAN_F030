@@ -23,8 +23,8 @@ Maintainer: Miguel Luis and Gregory Cristian
  //根据Fck_spre = Frtcclk/(PREDIV_S+1)/(PREDIV_A+1)
 //例程中RTC的工作频率为32.778/(8+1)/(1+1) = 37/18 ~= 2.055Khz, 1/2.055 ~= 0.486618
 //RTC时钟模块对输入的2.048/2.055kHz脉冲进行计数
-#define RTC_ALARM_TICK_DURATION                     0.48661825      // 1 tick every 488us
-#define RTC_ALARM_TICK_PER_MS                       2.055           // 1/2.048 = tick duration in ms
+#define RTC_ALARM_TICK_DURATION                     0.48840048       // 1 tick every 488us
+#define RTC_ALARM_TICK_PER_MS                       2.0475             // 1/2.048 = tick duration in ms
 	// sub-second number of bits
 #define N_PREDIV_S                                  10
 
@@ -213,8 +213,8 @@ void RtcInit( void )
 
 			RtcHandle.Instance = RTC;
 			RtcHandle.Init.HourFormat = RTC_HOURFORMAT_24;
-			RtcHandle.Init.AsynchPrediv = 8;  //PREDIV_A
-			RtcHandle.Init.SynchPrediv = 1;   //PREDIV_S
+			RtcHandle.Init.AsynchPrediv = 3;  //PREDIV_A
+			RtcHandle.Init.SynchPrediv = 3;   //PREDIV_S
 			RtcHandle.Init.OutPut = RTC_OUTPUT_DISABLE;
 			RtcHandle.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
 			RtcHandle.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
@@ -248,7 +248,7 @@ void RtcInit( void )
 			HAL_NVIC_EnableIRQ( RTC_IRQn );
 
 			// Init alarm.
-			HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
+			//HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
 
 			//RtcSetTimerContext( );
 			RtcInitialized = true;
@@ -427,13 +427,16 @@ static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
     RtcCalendar_t alarmTimer;
     RTC_AlarmTypeDef alarmStructure;
 
-    HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
-    
-    // Clear RTC Alarm Flag
-    __HAL_RTC_ALARM_CLEAR_FLAG( &RtcHandle, RTC_FLAG_ALRAF );
+//    HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
+//    
+//    // Clear RTC Alarm Flag
+//    __HAL_RTC_ALARM_CLEAR_FLAG( &RtcHandle, RTC_FLAG_ALRAF );
 
-    // Clear the EXTI's line Flag for RTC Alarm
-    __HAL_RTC_ALARM_EXTI_CLEAR_FLAG( );
+//    // Clear the EXTI's line Flag for RTC Alarm
+//    __HAL_RTC_ALARM_EXTI_CLEAR_FLAG( );
+
+	  HAL_RTC_DeactivateAlarm( &RtcHandle, RTC_ALARM_A );
+//    HAL_RTCEx_DeactivateWakeUpTimer( &RtcHandle ); //151有这个
 	
     // Load the RTC calendar
     now = RtcGetCalendar( );
@@ -444,13 +447,14 @@ static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
     // timeoutValue is in ms
     alarmTimer = RtcComputeTimerTimeToAlarmTick( timeoutValue, now );
     //RtcComputeTimerTimeToAlarmTick计算了now日历到timeoutValue的时间   并将结果转换为日历形式返回到alarmTimer
-
+		alarmStructure.Alarm = RTC_ALARM_A;
     alarmStructure.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;  //选择日期为闹钟参数
     alarmStructure.AlarmTime.TimeFormat = RTC_HOURFORMAT12_AM;
-		alarmStructure.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-    alarmStructure.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
-		   
 	  alarmStructure.AlarmMask = RTC_ALARMMASK_NONE;
+//		alarmStructure.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+//    alarmStructure.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+		   
+
     alarmStructure.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL; //屏蔽亚秒
 		
 
@@ -460,13 +464,10 @@ static void RtcStartWakeUpAlarm( uint32_t timeoutValue )
     alarmStructure.AlarmTime.Minutes = alarmTimer.CalendarTime.Minutes;
     alarmStructure.AlarmTime.Hours = alarmTimer.CalendarTime.Hours;
 		alarmStructure.AlarmDateWeekDay = alarmTimer.CalendarDate.Date;
-		alarmStructure.Alarm = RTC_ALARM_A;
 
+    //DebugPrintf("SET HAL_RTC_SetAlarm_IT\r\n");
     //开闹钟
-    if( HAL_RTC_SetAlarm_IT( &RtcHandle, &alarmStructure, RTC_FORMAT_BIN ) != HAL_OK )
-    {
-        assert_param( FAIL );
-    }
+    HAL_RTC_SetAlarm_IT( &RtcHandle, &alarmStructure, RTC_FORMAT_BIN );
 }
 //计算now(日历)到目标时间timeoutValue的时间戳,把结果转换为日历返回
 static RtcCalendar_t RtcComputeTimerTimeToAlarmTick( TimerTime_t timeCounter, RtcCalendar_t now )
@@ -784,7 +785,7 @@ static RtcCalendar_t RtcGetCalendar( void )
 //    BlockLowPowerDuringTask( false );                       //阻塞进入低功耗
 //    TimerIrqHandler( );                                     //RTC定时器中断处理，处理定时器链表
 //}
-void HAL_RTC_AlarmAEventCallback( RTC_HandleTypeDef *hrtc )
-{
-    TimerIrqHandler( );
-}
+//void HAL_RTC_AlarmAEventCallback( RTC_HandleTypeDef *hrtc )
+//{
+//    TimerIrqHandler( );
+//}
