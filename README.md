@@ -35,7 +35,11 @@ The following functions included:
 
 
  - Gateway: [HT-M01 Mini LoRa Gateway](http://www.heltec.cn/project/ht-m01-lora-gateway/?lang=en) + Raspberry Pi Zero W
+<<<<<<< HEAD
              ¡¢HT-M02 GateWay
+=======
+             ã€HT-M02 GateWay
+>>>>>>> 5c2c16567a8535fa26eb62b0b19e73732c0c9727
  - Node: STM32_F030_LoRa
 
  - LoRaServer: Aliyun ECS + Ubuntu 16.04 + [loraserver.io](https://www.loraserver.io/)
