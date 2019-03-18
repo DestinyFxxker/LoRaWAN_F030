@@ -34,12 +34,8 @@ The following functions included:
 [HelTecDevice](http://www.heltec.cn/proudct_center/internet_of_things/)
 
 
- - Gateway: [HT-M01 Mini LoRa Gateway](http://www.heltec.cn/project/ht-m01-lora-gateway/?lang=en) + Raspberry Pi Zero W
-<<<<<<< HEAD
-             ¡¢HT-M02 GateWay
-=======
-             ã€HT-M02 GateWay
->>>>>>> 5c2c16567a8535fa26eb62b0b19e73732c0c9727
+ - Gateway: HT-M02 GateWay¡¢[HT-M01 Mini LoRa Gateway](http://www.heltec.cn/project/ht-m01-lora-gateway/?lang=en) + Raspberry Pi Zero W
+
  - Node: STM32_F030_LoRa
 
  - LoRaServer: Aliyun ECS + Ubuntu 16.04 + [loraserver.io](https://www.loraserver.io/)
@@ -50,7 +46,7 @@ The following functions included:
     | working band | status |
     | :----------------: | :------------:|
     | EU_433 | not test |
-    | CN_470_510 | not test |
+    | CN_470_510 | work well |
     | EU_863_870 | not test |
     | US_902_928 | not test |
 
